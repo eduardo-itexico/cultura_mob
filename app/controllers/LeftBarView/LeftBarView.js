@@ -11,8 +11,8 @@ function onClickMenu(e){
             APP.handleNavigation("MyAlerts/MyAlerts");
             APP.openCloseMenu();
         	break;
-		case "familyWallet":
-			APP.handleNavigation("FamilyWallet/FamilyWallet");
+		case "listado":
+			APP.handleNavigation("Listado/Listado");
 			APP.openCloseMenu();
 			break;
 		case "myNeighborhoods":

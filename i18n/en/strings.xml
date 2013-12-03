@@ -175,6 +175,8 @@
 	<string name="WV">West Virginia</string>
 	<string name="WI">Wisconsin</string>
 	<string name="WY">Wyoming</string> 
+	<!-- MINE -->
+	<string name="ws_inmuebles_paginados">http://oficial.culturainmobiliaria.com.mx/inmuebles/getInmueblesPaginados/</string>
 	<!-- WEBSERVICES -->
     <string name="ws_category">https://alertid.com/category.asp</string>
     <string name="ws_commaction">https://alertid.com/apps/CommActionV7.asp</string>
