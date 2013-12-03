@@ -1,0 +1,154 @@
+<Alloy>
+	<View id="container">
+	    <View id="mapView" class="mapView" ns="Ti.Map"  animate="true" regionFit="true" userLocation="true"
+            mapType="Ti.Map.STANDARD_TYPE"  platform='ios,mobileweb' enableZoomControls="false">
+            
+        </View>
+        
+        <View id="mapView" class="mapView" ns="Alloy.Globals.Map"  animate="true" regionFit="true" userLocation="true"
+            mapType="Ti.Map.STANDARD_TYPE"  platform='android' enableZoomControls="false">
+
+        </View>
+        <View id="alertsTitleContainer" class="alertsTitleContainer">
+            <Label id="alertsTitle" class="alertsTitle">Current Location</Label>
+            <Button class="crimeIcon"/>
+            <Label id="crimeTitle" class="crimeTitle">0</Label>
+            <Button class="sexIcon"/>
+            <Label id="sexTitle" class="sexTitle">0</Label>
+        </View>
+        
+        <Button id="refreshMap" class="refreshMap" onClick="refreshMap"/>
+        
+
+        <View id="settingsView" class="settingsView" isOpen="false">
+            <Button class="settingsButtonView"/>
+            <Label class="labelBlue settingsTitle">Alerts</Label>
+            <Button class="settingsButton" onClick="changeSettings">Map Types</Button>
+            <Button id="close" onClick="openSettings"/>
+            <ScrollView class="scrollSettings">
+                <View class="filterView">
+                    <Label id="regionLabel" class="filterLabel2">Region: Neighborhood</Label>
+                    <Button class="filterButton" onClick="selectRegion">Select</Button>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label id="daysLabel" class="filterLabel2">Show: All days</Label>
+                    <Button class="filterButton" onClick="selectDays">Select</Button>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">All categories</Label>
+                    <Switch id="fsw0" value="true" class="filterSwitch" onChange="changeSwitch" filterID="0"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Sex Offenders (always on)</Label>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Crimes against children</Label>
+                    <Switch id="fsw2" value="true" class="filterSwitch" onChange="changeSwitch" filterID="1"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Crimes against the elderly</Label>
+                    <Switch id="fsw3" value="true" class="filterSwitch" onChange="changeSwitch" filterID="15"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Homocide</Label>
+                    <Switch id="fsw4" value="true" class="filterSwitch" onChange="changeSwitch" filterID="10"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Kidnapping/Missing person</Label>
+                    <Switch id="fsw5" value="true" class="filterSwitch" onChange="changeSwitch" filterID="3"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Sex crimes</Label>
+                    <Switch id="fsw6" value="true" class="filterSwitch" onChange="changeSwitch" filterID="2"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Weapons offense</Label>
+                    <Switch id="fsw7" value="true" class="filterSwitch" onChange="changeSwitch" filterID="14"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Assault & Battery</Label>
+                    <Switch id="fsw17" value="true" class="filterSwitch" onChange="changeSwitch" filterID="6"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Burglary</Label>
+                    <Switch id="fsw8" value="true" class="filterSwitch" onChange="changeSwitch" filterID="7"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Drug/Alcohol violations</Label>
+                    <Switch id="fsw9" value="true" class="filterSwitch" onChange="changeSwitch" filterID="9"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Hazardous materials/Gass</Label>
+                    <Switch id="fsw10" value="true" class="filterSwitch" onChange="changeSwitch" filterID="19"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Fire/Arson</Label>
+                    <Switch id="fsw11" value="true" class="filterSwitch" onChange="changeSwitch" filterID="16"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Property crime</Label>
+                    <Switch id="fsw12" value="true" class="filterSwitch" onChange="changeSwitch" filterID="12"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Theft/Lacerny</Label>
+                    <Switch id="fsw13" value="true" class="filterSwitch" onChange="changeSwitch" filterID="11"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Suspicious person/Prowler</Label>
+                    <Switch id="fsw14" value="true" class="filterSwitch" onChange="changeSwitch" filterID="5"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Vehicle Break-in/Theft</Label>
+                    <Switch id="fsw15" value="true" class="filterSwitch" onChange="changeSwitch" filterID="13"></Switch>
+                </View>
+                <View class="separator"></View>
+                <View class="filterView">
+                    <Label class="filterLabel2 ">Natural Disasters/Rescue</Label>
+                    <Switch id="fsw16" value="true" class="filterSwitch" onChange="changeSwitch" filterID="18"></Switch>
+                </View>
+                <View class="separator"></View>
+            </ScrollView>
+        </View>
+        
+        <View id="typesView" class="settingsView" isOpen="false">
+            <Button class="settingsButtonView"/>
+            <Label class="labelBlue settingsTitle">Types</Label>
+            <Button class="settingsButton" onClick="changeSettings">Map Alerts</Button>
+            <Button id="close" onClick="openSettings"/>
+            <ScrollView class="scrollSettings">
+                <Button class="typesButton" onClick="setStandView">Standard</Button>
+                <Button class="typesButton" onClick="setSatView">Satellite</Button>
+                <Button class="typesButton" onClick="setHybView">Hybrid</Button>
+                <Button class="typesButton" onClick="setTrafficView">Traffic</Button>
+            </ScrollView>
+        </View>
+        
+        <View id="listView" class="listView" isOpen="false">
+            <Button class="settingsButtonView"/>
+            <Button id="close" onClick="openListView"/>
+            <Label class="labelBlue settingsTitle">Alerts and Advisories</Label>
+            <TableView id="tableAlerts"></TableView>
+        </View>
+
+        <Button class="settings" onClick="openSettings"/>
+        <Button class="listButton" onClick="openListView"/>
+	</View>
+</Alloy>

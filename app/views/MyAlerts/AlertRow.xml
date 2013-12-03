@@ -1,0 +1,12 @@
+<Alloy>
+	<TableViewRow id="row">
+		<View class="absolute">
+			<View class="vertical">
+				<Label id="title"/>
+				<Label id="subtitle"/>
+				<Label id="description"/>
+			</View>
+			<ImageView id="icon"/>
+		</View>
+	</TableViewRow>
+</Alloy>

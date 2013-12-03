@@ -1,0 +1,16 @@
+<Alloy>
+	<View class="container">
+	    <TableView id="table">
+	        <TableViewRow id="searchRow" class="searchRow">
+	            <TextField id="searchTxt" class="searchTxt"></TextField>
+	            <Button id="searchBtn" class="searchBtn" onClick="androidSearch"></Button>
+	        </TableViewRow>
+	        <TableViewRow class="row" hasChild="false">
+	        	<Label textid="join_to_group" class="title2"/>
+	        </TableViewRow>
+	        <TableViewRow class="row">
+	        	<Label textid="create_your_own" class="title"/>
+	        </TableViewRow>
+	    </TableView>
+	</View>
+</Alloy>

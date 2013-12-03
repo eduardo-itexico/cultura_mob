@@ -1,0 +1,269 @@
+<Alloy>
+	<ScrollView class="container">
+		<View value="AL" class="row" onClick="setValue">
+			<Label text="Alabama"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="AK" class="row" onClick="setValue">
+			<Label text="Alaska"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="AZ" class="row" onClick="setValue">
+			<Label text="Arizona"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="AR" class="row" onClick="setValue">
+			<Label text="Arkansas"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="CA" class="row" onClick="setValue">
+			<Label text="California"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="CO" class="row" onClick="setValue">
+			<Label text="Colorado"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="CT" class="row" onClick="setValue">
+			<Label text="Connecticut"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="DE" class="row" onClick="setValue">
+			<Label text="Delaware"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="DC" class="row" onClick="setValue">
+			<Label text="District of Columbia"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="FL" class="row" onClick="setValue">
+			<Label text="Florida"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="GA" class="row" onClick="setValue">
+			<Label text="Georgia"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="HI" class="row" onClick="setValue">
+			<Label text="Hawaii"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="ID" class="row" onClick="setValue">
+			<Label text="Idaho"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="IL" class="row" onClick="setValue">
+			<Label text="Illinois"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="IN" class="row" onClick="setValue">
+			<Label text="Indiana"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="IA" class="row" onClick="setValue">
+			<Label text="Iowa"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="KS" class="row" onClick="setValue">
+			<Label text="Kansas"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="KY" class="row" onClick="setValue">
+			<Label text="Kentucky"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="LA" class="row" onClick="setValue">
+			<Label text="Louisiana"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="ME" class="row" onClick="setValue">
+			<Label text="Maine"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="MD" class="row" onClick="setValue">
+			<Label text="Maryland"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="MA" class="row" onClick="setValue">
+			<Label text="Massachusetts"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="MI" class="row" onClick="setValue">
+			<Label text="Michigan"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="MN" class="row" onClick="setValue">
+			<Label text="Minnesota"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="MS" class="row" onClick="setValue">
+			<Label text="Mississippi"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="MO" class="row" onClick="setValue">
+			<Label text="Missouri"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="MT" class="row" onClick="setValue">
+			<Label text="Montana"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="NE" class="row" onClick="setValue">
+			<Label text="Nebraska"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="NV" class="row" onClick="setValue">
+			<Label text="Nevada"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="NH" class="row" onClick="setValue">
+			<Label text="New Hampshire"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="NJ" class="row" onClick="setValue">
+			<Label text="New Jersey"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="NM" class="row" onClick="setValue">
+			<Label text="New Mexico"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="NY" class="row" onClick="setValue">
+			<Label text="New York"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="NC" class="row" onClick="setValue">
+			<Label text="North Carolina"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="ND" class="row" onClick="setValue">
+			<Label text="North Dakota"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="OH" class="row" onClick="setValue">
+			<Label text="Ohio"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="OK" class="row" onClick="setValue">
+			<Label text="Oklahoma"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="OR" class="row" onClick="setValue">
+			<Label text="Oregon"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="PA" class="row" onClick="setValue">
+			<Label text="Pennsylvania"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="PR" class="row" onClick="setValue">
+			<Label text="Puerto Rico"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="RI" class="row" onClick="setValue">
+			<Label text="Rhode Island"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="SC" class="row" onClick="setValue">
+			<Label text="South Carolina"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="SD" class="row" onClick="setValue">
+			<Label text="South Dakota"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="TN" class="row" onClick="setValue">
+			<Label text="Tennessee"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="TX" class="row" onClick="setValue">
+			<Label text="Texas"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="UT" class="row" onClick="setValue">
+			<Label text="Utah"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="VT" class="row" onClick="setValue">
+			<Label text="Vermont"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="VI" class="row" onClick="setValue">
+			<Label text="Virgin Islands"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="VA" class="row" onClick="setValue">
+			<Label text="Virginia"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="WA" class="row" onClick="setValue">
+			<Label text="Washington"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="WV" class="row" onClick="setValue">
+			<Label text="West Virginia"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="WI" class="row" onClick="setValue">
+			<Label text="Wisconsin"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+		<View value="WY" class="row" onClick="setValue">
+			<Label text="Wyoming"></Label>
+			<ImageView class="arr_right"></ImageView>
+			<View class="separator"></View>
+		</View>
+	</ScrollView>
+</Alloy>

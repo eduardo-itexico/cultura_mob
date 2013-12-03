@@ -1,0 +1,124 @@
+
+"Label" : {
+	textAlign				: 'left',
+	left					: 15
+}
+
+"TextField" : {
+	top						: 5,
+	left					: 15,
+	right 					: 15
+}
+
+"ScrollView" : {
+	scrollType				: 'vertical',
+	layout					: 'vertical'
+}
+
+".absolute" : {
+	height 					: 40,
+	left					: 0,
+	right					: 0,
+	layout 					: 'absolute'
+}
+
+".avatar" : {
+	width					: 125,
+	height					: 125
+}
+
+".block" : {
+	height					: Ti.UI.SIZE,
+	layout					: 'vertical',
+	left					: 0,
+	right					: 0
+}
+
+".bottom_space" : {
+	bottom					: 5
+}
+
+".half_left" : {
+	height					: Ti.UI.SIZE,
+	left					: 135,
+	rigth					: 15,
+	layout					: 'vertical'
+}
+
+".white" : {
+	backgroundColor			: 'white'
+}
+
+"#avatar_image" : {
+	image					: '/images/ic_addphoto.png',// 'http://digital-photography-school.com/wp-content/uploads/2007/08/portrait.jpg',
+	width					: 125
+}
+
+"#avatar_mask" : {
+	image					: '/images/im_mask_account.png'
+}
+
+"#avatar_view" : {
+	height					: Ti.UI.SIZE,
+	left					: 15
+}
+
+"#cell_phone" : {
+	keyboardType			: Ti.UI.KEYBOARD_NAMEPHONE_PAD
+}
+
+"#container" : {
+	backgroundColor			: '#ecf1f4'
+}
+
+"#confirm_password" : {
+	passwordMask			: true
+}
+
+"#first_block" : {
+	layout					: 'absolute',
+	top						: 5
+}
+
+"#home_phone" : {
+	keyboardType			: Ti.UI.KEYBOARD_NAMEPHONE_PAD
+}
+
+"#password" : {
+	passwordMask			: true
+}
+
+"#promocode" : {
+	returnKeyType			: Ti.UI.RETURNKEY_DONE
+}
+
+"#tag_password" : {
+	textid					: 'password',
+	left					: 15,
+	color					: '#000',
+	font : {
+		fontSize			: 16
+	}
+}
+
+"#tag_promocode" : {
+	textid					: 'promocode',
+	left					: 15,
+	color					: '#000',
+	font : {
+		fontSize			: 16
+	}
+}
+
+"#work_phone" : {
+	keyboardType			: Ti.UI.KEYBOARD_NAMEPHONE_PAD
+}
+
+"#username" : {
+	textid					: 'username',
+	color					: 'black',
+	font : {
+		fontSize			: 16
+	}
+}
+

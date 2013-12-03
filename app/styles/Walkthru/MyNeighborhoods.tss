@@ -1,0 +1,39 @@
+
+"#background": {
+	backgroundColor		: 'black',
+	width				: Ti.UI.FILL,
+	height				: Ti.UI.FILL,
+	opacity				: 0.7
+}
+
+"#container": {
+	width				: Ti.UI.FILL,
+	height				: Ti.UI.FILL,
+	zIndex				: 9999999
+}
+
+"#options": {
+	image				: '/images/Walkthru/ic_message_options.png',
+	top 				: 64,
+	right				: '100%'
+}
+
+"#like": {
+	image				: '/images/Walkthru/ic_like.png',
+	top 				: 200,
+	left				: '100%'
+}
+
+"#reply": {
+	image				: '/images/Walkthru/ic_reply.png',
+	top 				: 185,
+	right				: '100%'
+}
+
+"#add": {
+	image				: '/images/Walkthru/ic_add_.png',
+	left				: '100%',
+	bottom 				: 5
+}
+
+

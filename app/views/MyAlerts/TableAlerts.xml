@@ -1,0 +1,6 @@
+<Alloy>
+	<TableView id="tableAlerts">
+		<TableViewSection id="alerts"></TableViewSection>
+		<TableViewSection id="advisors"></TableViewSection>
+	</TableView>
+</Alloy>

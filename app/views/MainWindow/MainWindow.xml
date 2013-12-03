@@ -1,0 +1,11 @@
+<Alloy>
+	<Window id="win" class="win">
+		<View id="leftBar" class="leftBar"></View>
+		<View id="mainContainer" class="mainContainer" isOpen="false">
+			<View id="viewContainer" class="viewContainer"></View>
+			<View id="backgroundIosBar" class="backgroundIosBar"></View>
+			<View id="topToolBarContainer" class="topToolBarContainer"></View>
+		</View>
+		<View id="rightBar" class="rightBar"></View>
+	</Window>
+</Alloy>

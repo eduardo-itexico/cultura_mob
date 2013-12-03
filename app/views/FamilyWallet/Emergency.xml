@@ -1,0 +1,22 @@
+<Alloy>
+	<ScrollView class="container" id="mainContainer">
+			<View class="blank"></View>
+			<View class="content" onClick="clickButtons">
+				<Label class="labelEmergency">If this is an emergency call</Label>
+				<Button class="button" id="callEmergency" ></Button>
+				<Label class="labelEmergency">Call the National Center for Missing Children</Label>
+				<Label class="smallFont"> (do not use for pets)</Label>
+				<Button class="button" id="callNCMEC" ></Button>
+				<View class="floatSeparator"></View>
+				<View class="separator"></View>
+				<View class="floatSeparator"></View>
+				<View id="containerTips">
+					<View id="containerText">
+						<Button class="button" id="tips"></Button>
+						<Label class="smallFont"> (instructions)</Label>
+						<Label class="labelEmergency">Please take a current picture and update the content for your family member regularly.  If you are traveling, we recommend taking a current picture. \n \n My Family Wallet content is stored on your device only.  Your information is not transmitted unless you use the Send Profile button to email it. \n \n If you have an emergency, always dial 911 first.  Then you can use the Send Profile button to email the content to the authorities.</Label>
+					</View>
+				</View>
+			</View>
+	</ScrollView>
+</Alloy>

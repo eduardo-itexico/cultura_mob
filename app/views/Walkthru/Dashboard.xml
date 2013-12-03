@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="container">
+		<View id="background"/>
+		<ImageView id="category"/>
+	</View>
+</Alloy>

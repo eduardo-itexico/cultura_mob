@@ -1,0 +1,24 @@
+
+".blue" : {
+	color: "#17B8E4",
+	font: {
+		fontSize: 30
+	}
+}
+
+".vertical" : {
+	height 				: Ti.UI.SIZE,
+	left				: 0,
+	right				: 0,
+	layout 				: 'vertical'
+}
+
+"#container" : {
+	backgroundColor		: '#ecf1f4',
+	layout				: 'vertical',
+	scrollType			: 'vertical'
+}
+
+"#no_data" : {
+	height : 0
+}

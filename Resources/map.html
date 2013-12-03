@@ -1,0 +1,91 @@
+<html>
+  <head>
+  	<title>AlertID</title>
+    <head><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" /></head>
+    <!--<script src="http://maps.google.com/maps?file=api&v=2&key=AIzaSyD59xRAks5KUy77BIeG2MpxL2ux4cx32QQ"
+      type="text/javascript"></script>-->
+      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript">
+
+    var map;
+    var trafficInfo;
+    var toggleState = 1;
+    var lat;
+    var lon;
+    var beachMarker;
+    var infowindow;
+	
+	
+    function initialize() {
+    	Ti.App.fireEvent("getCoords");
+    }
+	
+	Ti.App.addEventListener("setMap",function(_params){
+		lat = _params.lat;
+    	lon = _params.lon;
+       	var myLatLng = new google.maps.LatLng(_params.lat, _params.lon);
+        var mapOptions = {
+          zoom: 14,
+          center: myLatLng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+        var trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+        
+        
+        
+        var image = '/images/location.png';
+        beachMarker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            icon: image
+        });
+        
+        /*infowindow = new google.maps.InfoWindow({
+        map: map,
+        position: myLatLng,
+        content: 'Your Current Location.'
+      });*/
+        
+        //Ti.App.fireEvent("updateLocation");
+
+	});
+	
+	Ti.App.addEventListener("moveMarker",function(_params){
+		lat = _params.lat;
+    	lon = _params.lon;
+		beachMarker.setPosition( new google.maps.LatLng( lat, lon ) );
+		//infowindow.setPosition( new google.maps.LatLng( lat, lon ) );
+    	map.panTo( new google.maps.LatLng( lat, lon ) );
+    	//alert("123");
+	});
+	
+	Ti.App.addEventListener("setCenter",function(_params){
+		lat = _params.lat;
+    	lon = _params.lon;
+		var myLatLng = new google.maps.LatLng(lat, lon);
+		map.setCenter(myLatLng);
+	});
+	
+	
+	
+    function toggleTraffic() {
+      if (toggleState == 1) {
+        map.removeOverlay(trafficInfo);
+        toggleState = 0;
+      } else {
+        map.addOverlay(trafficInfo);
+        toggleState = 1;
+      }
+    }
+    </script>
+  </head>
+  <body onload="initialize()" style = "margin:0px;padding:0px;">
+    <div id="map_canvas" style="width: 100%; height: 100%;border: 0;"></div>
+    <!--<br clear="all"/>
+    <br/>
+    <input type="button" value="Toggle Traffic" onClick="toggleTraffic();"/>
+    <br/></br/>-->
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<Alloy>
+	<View class="container" isOpen="false">
+		<View id="backgroundIosBar" class="backgroundIosBar"></View>
+        <ScrollView id="menuContainer" class="menuContainer">
+            <View class="optionContainer" id="lsitado" onClick="onClickMenu">
+                <View class="myAlertsIcon"/>
+                <Label class="optionTitle">Listado</Label>
+            </View>
+            <View class="optionContainer" id="avanzada" onClick="onClickMenu">
+                <View class="myNeighborhoodIcon"/>
+                <Label class="optionTitle"> Avanzada</Label>
+            </View>
+        </ScrollView>
+        <View class="shadowImage"></View>
+	</View>
+</Alloy>

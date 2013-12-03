@@ -1,0 +1,14 @@
+
+".container" : {
+  layout:'vertical'
+}
+
+
+".caption":{
+	top:10,
+	color:"#17B8E4",
+	left:10,
+	font:{
+		fontSize:15
+	}
+}

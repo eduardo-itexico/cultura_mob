@@ -1,0 +1,7 @@
+<Alloy>
+	<View class="container">
+		<WebView id="tipsWebV">
+			
+		</WebView>
+	</View>
+</Alloy>

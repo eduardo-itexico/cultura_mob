@@ -1,0 +1,82 @@
+<Alloy>
+	<ScrollView id="container">
+
+		<View class="blank"/>
+		
+		<View class="vertical">
+			<TextField id="firstname" onFocus="normalize" onReturn="next"/>
+			<TextField id="lastname" onFocus="normalize" onReturn="next"/>
+			<TextField id="username" onFocus="normalize" onReturn="next"/>
+			<TextField id="cellphone" onFocus="normalize" onReturn="next" class="bottom_space"/>		
+		</View>
+		
+		<View class="separator"/>
+		
+		<View class="white">
+			<Label id="tag_address"/>
+		</View>
+		
+		<View class="separator"/>
+			
+		<View class="vertical">
+			<TextField id="address" onFocus="normalize" onReturn="next"/>
+			<TextField id="city" onFocus="normalize" onReturn="next"/>
+			<TextField id="postal_code" onFocus="normalize" onReturn="next" class="bottom_space"/>
+		</View>
+
+		<View class="separator"/>
+
+		<View class="vertical">
+			<View id="country_row_picker" class="white" onClick="pickCountry">
+				<Label textid="country" class="select_title"/>
+				<Label id="country" class="option"/>
+				<ImageView class="arr_down"/>
+			</View>
+		</View>
+		
+		<View class="separator"/>
+		
+		<View class="vertical">
+			<View id="state_row_picker" class="white" onClick="pickState">
+				<Label textid="state" class="select_title"/>
+				<Label id="state" class="option"/>
+				<ImageView class="arr_down"/>
+			</View>
+			<View id="state_row_field" class="vertical">
+				<TextField id="state_field" class="bottom_space"/>
+			</View>
+		</View>
+		
+		<View class="separator"/>
+		
+		<View class="white">
+			<Label id="tag_password"/>
+		</View>
+		
+		<View class="separator"/>
+		
+		<View class="vertical">
+			<TextField id="password" onFocus="normalize" onReturn="next"/>
+			<TextField id="confirm_password" onFocus="normalize" class="bottom_space"/>
+		</View>
+		
+		<View class="separator"/>
+		
+		<View class="vertical">
+			<View id="agree_row" class="white" onClick="normalize">
+				<View class="horizontal">
+					<Label id="i_accept"/>
+					<Label id="terms_and_cond" onClick="openPrivacy"/>
+				</View>
+				<View class="button" onClick="toggleCheckbox">
+					<ImageView id="agree" class="checkbox"/>
+				</View>
+			</View>
+		</View>
+
+		<View class="separator"/>
+		
+		<View class="blank"/>
+		
+	</ScrollView>
+</Alloy>

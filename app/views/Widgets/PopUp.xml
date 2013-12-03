@@ -1,0 +1,9 @@
+<Alloy>
+	<View id="container">
+		<View id="head">
+			<Label id="title"/>
+			<Button id="close" onClick="closePopup"/>
+		</View>
+		<ScrollView id="content"/>
+	</View>
+</Alloy>
