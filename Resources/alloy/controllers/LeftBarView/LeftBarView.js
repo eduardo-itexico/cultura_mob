@@ -183,8 +183,6 @@ function Controller() {
         icon: $.session_icon
     };
     APP.notifications.badge = $.notification_number;
-    tempOption = $.myAlerts;
-    tempOption.backgroundImage = "/images/bg_dashboard_selector.png";
     exports.highlightNotifications = highlightNotifications;
     __defers["$.__views.lsitado!click!onClickMenu"] && $.__views.lsitado.addEventListener("click", onClickMenu);
     __defers["$.__views.avanzada!click!onClickMenu"] && $.__views.avanzada.addEventListener("click", onClickMenu);

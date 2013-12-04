@@ -124,7 +124,7 @@ var APP = {
 	fixSizeAds : function( number ){
 		number = number ? parseInt( number ) : 0 ;
 		if( APP.ads ){
-			APP.ads = require( 'AdMob' );
+			//APP.ads = require( 'AdMob' );
 			return number + 50;
 		}
 		else{
@@ -255,7 +255,7 @@ var APP = {
     				if(APP.currentController.updateView){
     				    APP.currentController.updateView(_params);
     				}
-    				APP.ads && APP.ads( APP.mainContainer );
+    				//APP.ads && APP.ads( APP.mainContainer );
     			});
 			}
 		} else {

@@ -79,11 +79,7 @@ var APP = {
     },
     fixSizeAds: function(number) {
         number = number ? parseInt(number) : 0;
-        if (APP.ads) {
-            APP.ads = require("AdMob");
-            return number + 50;
-        }
-        return number;
+        return APP.ads ? number + 50 : number;
     },
     fixSizeIos7: function(number) {
         number = number ? parseInt(number) : 0;
@@ -162,7 +158,6 @@ var APP = {
             }
             APP.container.add(APP.currentController.getView());
             APP.currentController.updateView && APP.currentController.updateView(_params);
-            APP.ads && APP.ads(APP.mainContainer);
         }));
     },
     logout: function() {
