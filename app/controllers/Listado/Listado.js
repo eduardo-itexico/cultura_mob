@@ -1,21 +1,41 @@
 // INSTANTIATION
 var APP = require("/core");
-var DB  = require("/db");
 var Utils  = require("/utils");
 var args = arguments[0] || {};
 var familyListController = this;
-var user_token	=  Ti.App.Properties.getString("user_token",false);
-var action 		= DB.INSERT;
 
-DB.init(function(){});
-loadUsers();
+
+loadInmuebles();
 
 // ADDITIONS 
 
 // FUNCTIONS
-function loadUsers(){
-	var members = DB.getMembers(user_token,function(){});
-	Utils.removeChildren($.scrollFamily);
+function loadInmuebles(){
+	var dataTemp = {
+            url     : L("ws_inmuebles_paginados"),
+            type    : 'GET',
+            format  : 'JSON',
+            data    : {}
+        };
+        Ti.API.info("-->"+JSON.stringify(dataTemp));
+        APP.http.request(dataTemp,function(_result){
+            //Ti.API.info("-->"+JSON.stringify(_result));
+            if(_result._result == 1){
+                if(_result._data.errorcode == 0){
+                    
+                    APP.hideActivityindicator();
+                }else{
+                    APP.hideActivityindicator();
+                    alert("No se encontraron inmuebles");
+                }
+            }else{
+                APP.hideActivityindicator();
+                alert("Error de conexion a internet");
+            }
+            
+        });
+	
+	/*
 	if(members && members.length > 0){
 		$.scrollFamily.add(Ti.UI.createView({height:44+APP.fixSizeIos7()}));
 		for(var i=0; i < members.length; i++ ){
@@ -28,11 +48,7 @@ function loadUsers(){
 		var row = Alloy.createController('FamilyWallet/EmptyMembers').getView();
 		$.scrollFamily.add(row);
 	}
-}
-
-function initializeView(){
-    user_token  =  Ti.App.Properties.getString("user_token",false);
-    loadUsers();
+	*/
 }
 
 function updateView(){
@@ -44,6 +60,8 @@ function updateView(){
     user_token	=  Ti.App.Properties.getString("user_token",false);
     loadUsers();
 }
+
+
 
 function showProfile(e){
 	//Ti.API.info('Console-------->'+JSON.stringify(e.source));

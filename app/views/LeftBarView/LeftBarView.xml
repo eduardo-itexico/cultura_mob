@@ -2,7 +2,7 @@
 	<View class="container" isOpen="false">
 		<View id="backgroundIosBar" class="backgroundIosBar"></View>
         <ScrollView id="menuContainer" class="menuContainer">
-            <View class="optionContainer" id="lsitado" onClick="onClickMenu">
+            <View class="optionContainer" id="listado" onClick="onClickMenu">
                 <View class="myAlertsIcon"/>
                 <Label class="optionTitle">Listado</Label>
             </View>
