@@ -1,7 +1,0 @@
-<Alloy>
-	<View>
-		<ScrollView class="container" id="scrollFamily" onClick="showProfile">
-		</ScrollView>
-		<ImageView class="plusButton" onClick="showProfile" id="plusBtn"></ImageView>
-	</View>
-</Alloy>

@@ -1,7 +1,0 @@
-<Alloy>
-	<View  class="groupRow" onClick="loadData">
-       <Label id="streetLabel" class="streetLabel"></Label>
-       <Label id="streetLabel2" class="streetLabel2"></Label>
-       <Button class="buttonWhite groupButton" onClick="addAddress">Save</Button>
-   </View>
-</Alloy>

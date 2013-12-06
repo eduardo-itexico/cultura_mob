@@ -1,8 +1,0 @@
-<Alloy>
-    <View class="container">
-        <TableView id="table">
-            <TableViewRow id="tempRow" class="tempRow">
-            </TableViewRow>
-        </TableView>
-    </View>
-</Alloy>

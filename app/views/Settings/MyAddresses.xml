@@ -1,9 +1,0 @@
-<Alloy>
-	<ScrollView id="container">
-		<View class="blank"></View>
-		<View id="content"  class="vertical">
-			<View id="list"  class="vertical"></View>>
-		</View>
-		<View class="blank"></View>
-	</ScrollView>
-</Alloy>

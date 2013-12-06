@@ -1,9 +1,0 @@
-<Alloy>
-	<View id="container">
-		<View id="background"/>
-		<ImageView id="options"/>
-		<ImageView id="like"/>
-		<ImageView id="reply"/>
-		<ImageView id="add"/>
-	</View>
-</Alloy>

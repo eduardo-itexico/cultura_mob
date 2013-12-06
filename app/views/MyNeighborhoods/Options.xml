@@ -1,5 +1,0 @@
-<Alloy>
-	<View class="container">
-	    <TableView id="tblOptions" class="tblOptions" onClick="selectOption"></TableView>
-	</View>
-</Alloy>

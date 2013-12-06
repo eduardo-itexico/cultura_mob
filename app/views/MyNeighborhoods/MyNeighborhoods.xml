@@ -1,9 +1,0 @@
-<Alloy>
-	<View class="container">
-	    <ScrollView id="commentsContainer" class="commentsContainer"/>
-	    <View id="neighborTitleContainer" class="neighborTitleContainer">
-	        <Label id="neighborTitle" class="neighborTitle">Current Location</Label>
-	    </View>
-	    <Button class="addComment" onClick="addComment"/>
-	</View>
-</Alloy>

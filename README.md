@@ -1,4 +1,0 @@
-AlertID_Alloy
-=============
-
-AlertID
