@@ -1,0 +1,11 @@
+<Alloy>
+	<View class="container">
+		<Label> Please select your options:</Label>
+		<TableView id="optionTV" onClick="onClickOptions">
+			<TableViewRow title="Homeland Security" color="black"></TableViewRow>
+			<TableViewRow title="Community" color="black"></TableViewRow>
+			<TableViewRow title="Media" color="black"></TableViewRow>
+			<TableViewRow title="Anonymous" color="black"></TableViewRow>
+		</TableView>
+	</View>
+</Alloy>

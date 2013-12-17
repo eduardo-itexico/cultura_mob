@@ -1,0 +1,133 @@
+
+"Label" : {
+	textAlign				: 'left',
+	left					: 15
+}
+
+"TextField" : {
+	top						: 5,
+	left					: 15,
+	right 					: 15
+}
+
+"ScrollView" : {
+	backgroundColor			: '#ecf1f4',
+	scrollType				: 'vertical',
+	layout					: 'vertical'
+}
+
+".bottom_space" : {
+	bottom					: 5
+}
+
+".button" : {
+	width					: 40,
+	height					: 40,
+	right					: 5
+}
+
+".checkbox" : {
+	image				: '/images/bt_radio_unselect.png',
+	width				: 23,
+	height				: 23,
+	value				: false
+}
+
+".horizontal" : {
+	left					: 0,
+	width					: Ti.UI.SIZE,
+	height					: Ti.UI.SIZE,
+	layout					: 'horizontal'
+}
+
+".option" : {
+	textAlign				: 'right',
+	left					: 110,
+	right					: 35
+}
+
+".select_title" : {
+	right					: 100
+}
+
+".separator" : {
+	top						: null,
+	bottom					: 0,
+	layout					: 'vertical'
+}
+
+".vertical" : {
+	height 					: Ti.UI.SIZE,
+	layout 					: 'vertical'
+}
+
+".white" : {
+	backgroundColor			: 'white',
+	height 					: 40
+}
+
+"#username" : {
+	autocapitalization		: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+	keyboardType			: Ti.UI.KEYBOARD_EMAIL
+}
+
+"#cellphone" : {
+	keyboardType			: Ti.UI.KEYBOARD_PHONE_PAD
+}
+
+"#confirm_password" : {
+	returnKeyType			: Ti.UI.RETURNKEY_DONE,
+	passwordMask			: true
+}
+
+"#country" : {
+	text					: ''
+}
+
+"#i_accept" : {
+	textid					: 'i_accept',
+	color					: '#07beeb',
+	font : {
+		fontSize			: 16
+	}
+}
+
+"#password" : {
+	passwordMask			: true
+}
+
+"#tag_address" : {
+	textid					: 'address',
+	left					: 15,
+	color					: '#000',
+	font : {
+		fontSize			: 16
+	}
+}
+
+"#tag_password" : {
+	textid					: 'password',
+	left					: 15,
+	color					: '#000',
+	font : {
+		fontSize			: 16
+	}
+}
+
+"#terms_and_cond" : {
+	textid					: 'terms_and_cond',
+	backgroundImage			: '/images/subline_blue.png',
+	height					: Ti.UI.SIZE,
+	left					: 15,
+	color					: '#07beeb',
+	font : {
+		fontStyle			: 'italic'
+	}
+}
+
+"#state" : {
+	text					: '' /**** Is necessary that exist this field. ****/
+}
+
+
+

@@ -1,0 +1,1 @@
+/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/app.js

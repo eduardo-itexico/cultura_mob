@@ -1,0 +1,9 @@
+
+"WebView" : {
+	backgroundColor	: '#ecf1f4',
+	scalesPageToFit : true
+}
+
+"#container" : {
+	layout			: 'vertical'
+}

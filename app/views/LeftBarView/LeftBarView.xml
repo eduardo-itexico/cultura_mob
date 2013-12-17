@@ -1,0 +1,45 @@
+<Alloy>
+	<View class="container" isOpen="false">
+		<View id="backgroundIosBar" class="backgroundIosBar"></View>
+        <ScrollView id="menuContainer" class="menuContainer">
+            <View class="optionContainer" id="myAlerts" onClick="onClickMenu">
+                <View class="myAlertsIcon"/>
+                <Label class="optionTitle"> My Alerts</Label>
+            </View>
+            <View class="optionContainer" id="myNeighborhoods" onClick="onClickMenu">
+                <View class="myNeighborhoodIcon"/>
+                <Label class="optionTitle"> My Neighborhoods</Label>
+            </View>
+            <View class="optionContainer" id="myGroups" onClick="onClickMenu">
+                <View class="myGroupsIcon"/>
+                <Label class="optionTitle"> My Groups</Label>
+            </View>
+            <!--View class="optionContainer" id="myFF" onClick="onClickMenu">
+                 <View class="myFFIcon"/>
+                <Label class="optionTitle"> My Friends and Family</Label>
+            </View-->
+            <View class="optionContainer" id="familyWallet" onClick="onClickMenu">
+                <View class="familyWalletIcon"/>
+                <Label class="optionTitle"> My Family Wallet</Label>
+            </View>
+            <View class="optionContainer" id="notifications" onClick="onClickMenu">
+                <View class="notificationsIcon"/>
+                <Label class="optionTitle"> Notifications</Label>
+                <Label id="notification_number"></Label>
+            </View>
+            <View class="optionContainer" id="report" onClick="onClickMenu">
+                <View class="reportIcon"/>
+                <Label class="optionTitle"> Report</Label>
+            </View>
+            <View class="optionContainer" id="settings" onClick="onClickMenu">
+                <View class="settingsIcon"/>
+                <Label class="optionTitle" id="settings_label"></Label>
+            </View>
+            <View class="optionContainer"  id="session" onClick="onClickMenu">
+            	<ImageView id="session_icon"/>
+                <Label class="optionTitle" id="session_label"></Label>
+            </View>
+        </ScrollView>
+        <View class="shadowImage"></View>
+	</View>
+</Alloy>

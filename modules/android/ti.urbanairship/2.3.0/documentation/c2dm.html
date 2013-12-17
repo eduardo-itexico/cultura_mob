@@ -1,0 +1,38 @@
+<h1>Getting Started with C2DM</h1>
+<p>Follow these steps to properly configure your Titanium application to use C2DM as the transport for Urban Airship push notifications.</p>
+<p><em>NOTE</em></p>
+<p>You will not need to make the changes to the AndroidManifest.xml that you see in the setup guide. This will be done for you automatically during the application build process.</p>
+<h2>Step 1: Sign up for your C2DM account</h2>
+<p>Sign up for a C2DM account here <a href="http://code.google.com/android/c2dm/signup.html">http://code.google.com/android/c2dm/signup.html</a></p>
+<ul>
+<li>You will need to enter your Google account id </li>
+<li>This is the ID that you will use for C2DM_SENDER in your application JS file</li>
+</ul>
+<h2>Step 2: C2DM Authorization Token</h2>
+<p>You need a C2DM Authorization Token to put into the settings of your application.</p>
+<ul>
+<li>Download and run this python script to generate your authorization token <a href="http://appcelerator-eap.s3.amazonaws.com/Modules/clientauth.py">http://appcelerator-eap.s3.amazonaws.com/Modules/clientauth.py</a></li>
+<li>Navigate to <a href="http://go.urbanairship.com">http://go.urbanairship.com</a></li>
+<li>Edit Application and enter your Android Package name and C2DM Authorization Token that was just generated</li>
+</ul>
+<h2>Step 3: Configure C2DM Transport</h2>
+<p>Set the Urban Airship options in your airshipconfig.properties file to use the C2DM transport.</p>
+<ul>
+<li>Set the "transport" option to "c2dm"</li>
+<li>Set the "c2dmSender" option to your Google Account ID</li>
+</ul>
+<pre>
+  transport = c2dm
+  c2dmSender = username@gmail.com
+</pre>
+
+<h2>Important Notes</h2>
+<ul>
+<li>Device must be running Android 2.2 or higher that also have the Market application installed</li>
+<li>Device must have at least one logged in Google account. "Settings &gt; Account &amp; sync"</li>
+</ul>
+<h2>C2DM Documentation</h2>
+<ul>
+<li><a href="http://docs.urbanairship.com">UrbanAirship Getting Started: Android: Push (C2DM)</a></li>
+<li><a href="http://code.google.com/android/c2dm/index.html">Google's C2DM setup guide</a></li>
+</ul>

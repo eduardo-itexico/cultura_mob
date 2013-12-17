@@ -1,0 +1,126 @@
+<h1>Ti.UrbanAirship Module</h1>
+<h2>Description</h2>
+<p>This Module allows the Urban Airship iOS library to used inside of Titanium. Push and Rich Push are supported.</p>
+<h2>Getting Started</h2>
+<p>View the <a href="http://docs.appcelerator.com/titanium/2.0/#!/guide/Using_Titanium_Modules">Using Titanium Modules</a> document for instructions on getting
+started with using this module in your application.</p>
+<h2>Accessing the UrbanAirship Module</h2>
+<p>To access this module from JavaScript, you would do the following:</p>
+<pre><code>var UrbanAirship = require('ti.urbanairship');
+</code></pre>
+<h2>Urban Airship Docs</h2>
+<p><a href="https://docs.urbanairship.com">https://docs.urbanairship.com</a></p>
+<h2>Apple Push Docs</h2>
+<p><a href="http://developer.apple.com/library/ios/#documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Introduction/Introduction.html">http://developer.apple.com/library/ios/#documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Introduction/Introduction.html</a></p>
+<h2>Urban Airship Module Functions</h2>
+<h3>Ti.UrbanAirship.registerDevice(token[string], options[object, optional])</h3>
+<p>Registers the device with Urban Airship for push notifications. Call this function after calling
+Ti.Network.registerForPushNotifications.</p>
+<h4>Arguments</h4>
+<p>Requires one argument, and optionally takes a second for additional options.</p>
+<ul>
+<li>token[string, required]: The deviceToken returned from Ti.Network.registerForPushNotifications.</li>
+<li>options[object, optional]: A dictionary containing any of the following keys:</li>
+<li>tags[string[]]: Tags can be used to categorize devices, and you can push notifications to devices with particular tags.</li>
+<li>alias[string]: Aliases are associated with device tokens, providing an alternate name.</li>
+</ul>
+<h3>Ti.UrbanAirship.unregisterDevice()</h3>
+<p>Unregisters the device with Urban Airship.</p>
+<h4>Arguments</h4>
+<p>None.</p>
+<h3>Ti.UrbanAirship.displayInbox({ animated[bool] })</h3>
+<p>Shows the persistent inbox that stores and organizes rich push notifications.</p>
+<h4>Arguments</h4>
+<p>Takes one optional argument, a dictionary with keys:</p>
+<ul>
+<li>animated[bool]: Whether the inbox should animate in; defaults to true</li>
+</ul>
+<h3>Ti.UrbanAirship.hideInbox()</h3>
+<p>Hides the persistent inbox.</p>
+<h3>Ti.UrbanAirship.handleNotification(data[object])</h3>
+<p>Handles a notification from Apple's servers.</p>
+<h4>Arguments</h4>
+<p>Takes one argument, the data payload from the "Ti.Network.registerForPushNotifications" callback.</p>
+<ul>
+<li>data[object]: The data payload from the "Ti.Network.registerForPushNotification" callback.</li>
+</ul>
+<h3>Ti.UrbanAirship.resetBadge()</h3>
+<p>Resets the badge count on the UA servers. Note that the badge count is automatically reset at startup, application resume, and notification received events if the autoResetBadge property is true (the default value).</p>
+<h4>Arguments</h4>
+<p>None</p>
+<h2>Properties</h2>
+<h3>notificationsEnabled[boolean] (read-only)</h3>
+<p>Whether or not notifications are enabled for your application (of any type: badge, alert, or sound).</p>
+<h3>autoBadge[boolean] (write-only)</h3>
+<p>Ensures that the client will always sync badge changes with the server so that subsequent autobadge notifications will increment properly.</p>
+<h3>badgeNumber[int] (write-only)</h3>
+<p>Sets the current badge number</p>
+<h3>autoResetBadge[boolean] (default: true)</h3>
+<p>Enables the Urban Airship module to automatically call resetBadge after takeoff, when the application resumes, and when a notification is received (via a call to handleNotification).</p>
+<h3>options[object]</h3>
+<p>A dictionary of the configuration options for this application:</p>
+<ul>
+<li>PRODUCTION_APP_KEY[string]: The application key for production</li>
+<li>PRODUCTION_APP_SECRET[string]: The application secret for production</li>
+<li>DEVELOPMENT_APP_KEY[string]: The application key for development</li>
+<li>DEVELOPMENT_APP_SECRET[string]: The application secret for development</li>
+<li>APP_STORE_OR_AD_HOC_BUILD[bool]: Whether or not the app is in production (true if yes, false if not)</li>
+<li>LOGGING_ENABLED[bool]: Whether or not logging should be enabled</li>
+</ul>
+<h2>Example</h2>
+<p><pre>/<em>
+ * Demonstrates how to set up your UA Inbox,
+ * and how to display the messages from it via the picker interface.
+ </em>/</p>
+<p>var window = Ti.UI.createWindow({
+    backgroundColor: 'white'
+});</p>
+<p>var UrbanAirship = require('ti.urbanairship');</p>
+<p>Ti.UrbanAirship.options = {
+    APP_STORE_OR_AD_HOC_BUILD: false,
+    PRODUCTION_APP_KEY: '=== YOUR PROD APP KEY ===',
+    PRODUCTION_APP_SECRET: '=== YOUR PROD APP SECRET ===',
+    DEVELOPMENT_APP_KEY: '=== YOUR DEV APP KEY ===',
+    DEVELOPMENT_APP_SECRET: '=== YOUR DEV APP SECRET ===',
+    LOGGING_ENABLED: true
+};</p>
+<p>var b = Ti.UI.createButton({
+    title: 'Open UA Inbox',
+    width: 200, height: 40
+});
+b.addEventListener('click', function() {
+    // Open default mailbox
+    Ti.UrbanAirship.displayInbox({ animated:true });
+});
+window.add(b);</p>
+<p>Ti.Network.registerForPushNotifications({
+    types:[
+        Ti.Network.NOTIFICATION_TYPE_BADGE,
+        Ti.Network.NOTIFICATION_TYPE_ALERT,
+        Ti.Network.NOTIFICATION_TYPE_SOUND
+    ],
+    success: function(e) {
+        var token = e.deviceToken;
+        //alert(e.deviceToken);
+        //Ti.API.log(token);
+        Ti.UrbanAirship.registerDevice(token);</p>
+<pre><code>    //alert('Registered remotely!');
+    b.enabled = true;
+},
+error: function(e) {
+    alert("Error: " + e.error);
+},
+callback: function(e) {
+    Ti.UrbanAirship.handleNotification(e.data);
+}
+</code></pre>
+<p>});</p>
+<p>window.open();</pre></p>
+<h2>Author</h2>
+<p>Jeff English</p>
+<h2>Module History</h2>
+<p>View the <a href="changelog.html">change log</a> for this module.</p>
+<h2>Feedback and Support</h2>
+<p>Please direct all questions, feedback, and concerns to <a href="mailto:info@appcelerator.com?subject=iOS%20UrbanAirship%20Module">info@appcelerator.com</a>.</p>
+<h2>License</h2>
+<p>Copyright(c) 2010-2012 by Appcelerator, Inc. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.</p>

@@ -1,0 +1,6 @@
+<Alloy>
+    <View  class="groupRow">
+       <Label id="groupTitle" class="groupTitle" onClick="loadData">Home of Lucy</Label>
+       <Button id="groupButton" class="buttonWhite groupButton" onClick="editAddress">Delete</Button>
+   </View>
+</Alloy>

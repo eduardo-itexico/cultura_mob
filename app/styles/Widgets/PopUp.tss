@@ -1,0 +1,43 @@
+
+"#close" : {
+	backgroundImage			: "/images/ic_close.png",
+	backgroundSelectedImage	: "/images/ic_close_pressed.png",
+	width					: 36,
+	height					: 36,
+	top						: 0,
+	right					: 5,
+	borderWidth				: 0
+}
+
+"#container" : {
+	backgroundImage			: "/images/bg_popup_flex.png",
+	backgroundTopCap		: 20,
+	backgroundLeftCap		: 20,
+	layout					: 'vertical',
+	zIndex					: 9999
+}
+
+"#content" : {
+	borderRadius			: 5,
+	top						: 0,
+	left					: 3,
+	right					: 6,
+	bottom					: 10,
+	layout					: 'vertical',
+	scrollType				: 'vertical'
+}
+
+"#head" : {
+	height					: 40
+}
+
+"#title" : {
+	height					: 40,
+	textAlign				: 'left',
+	color					: '#17B8E4',
+	font : {
+		fontSize			: 16
+	},
+	left					: 15
+}
+

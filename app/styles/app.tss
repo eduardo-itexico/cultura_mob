@@ -1,0 +1,115 @@
+/**
+*  Global styles definitions
+* General rule:
+* DON'T PUT POSITIONS (TOP, BOTTOM, RIGHT, LEFT) HERE
+* Margins are ok (top + bottom, left + right)
+*/
+
+"Button":{
+	backgroundSelectedImage:'/images/bgBlackOpacity39.png',
+	backgroundImage: "/images/transparent.png",
+	color: "#17B8E4",
+	borderColor: "#18b2e0",
+	borderWidth: 1,
+	borderRadius: 1,
+	style: Ti.UI.iPhone.SystemButtonStyle.PLAIN,
+	font: {
+		fontSize: 14
+	}
+},
+"Label": {
+	color: '#333',
+	font: {
+		fontSize: 14
+	}
+},
+"TextArea":{
+	textAlign: 'left',
+	color: '#333',
+	font: {
+		fontSize: 14
+	}
+},
+"TextField":{
+	backgroundImage: "/images/textbox_flex.png",
+	returnKeyType: Ti.UI.RETURNKEY_NEXT,
+	textAlign: 'left',
+	height: 36,
+	paddingLeft: 5,
+	color: '#333',
+	font: {
+		fontSize: 14
+	}
+},
+".ad_space":{
+	height: Alloy.Globals.CONTENT_BOTTOM
+},
+".arr_down": {
+	image				: '/images/ic_down_arrow.png',
+	right				: 15,
+	width				: 12,
+	height				: 8
+},
+".arr_right": {
+	image				: "/images/ic_forward.png",
+	right				: 0,
+	width				: 36,
+	height				: 36
+},
+".blank":{
+	height: Alloy.Globals.CONTENT_TOP
+},
+".buttonWhite":{
+	color: "white",
+	borderColor: "white"
+},
+".backgroundIosBar": {
+	backgroundImage: "/images/bg_statusbar_flex.png",
+	top: 0,
+	height: 0
+},
+".boldLbl":{
+	font: {
+		fontWeight: "bold"
+	}
+},
+".helpButton":{
+	backgroundSelectedImage	: "/images/ic_help_pressed.png",
+	backgroundImage: '/images/ic_help.png',
+	right:60,
+	width:36,
+	height:36,
+	borderWidth: 0
+},
+".labelBlue":{
+	color: "#17B8E4"
+},
+".separator":{
+	backgroundColor: "#CCC",
+	width: Ti.UI.FILL,
+	height: 1,
+	top: 0
+},
+".shareButton":{
+	backgroundSelectedImage: "/images/ic_undo_pressed.png",
+	backgroundImage: '/images/ic_undo.png',
+	right:10,
+	width:36,
+	height:36,
+	borderWidth: 0
+},
+".trashButton":{
+	backgroundSelectedImage: "/images/ic_trash_pressed.png",
+	backgroundImage: '/images/ic_trash.png',
+	width:36,
+	height:36,
+	right:110,
+	borderWidth: 0
+},
+".white":{
+	backgroundColor: 'white'
+},
+"#actionsContainer":{
+	height:Ti.UI.SIZE
+}
+

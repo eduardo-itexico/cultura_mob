@@ -1,0 +1,29 @@
+".groupRow":{
+	height:30,
+	top:5
+},
+".streetLabel":{
+	color:"white",
+	font:{
+		fontSize:14
+	},
+	left:10,
+	right:115,
+	top:0,
+	height:15
+},
+".streetLabel2":{
+	color:"white",
+	font:{
+		fontSize:12
+	},
+	left:10,
+	right:115,
+	top:14,
+	height:15
+},
+".groupButton":{
+	right:60,
+	width:50,
+	height:28
+}

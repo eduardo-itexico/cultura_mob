@@ -1,0 +1,10 @@
+<Alloy>
+	<View id="container">
+		<View id="background"/>
+		<ImageView id="address_list"/>
+		<ImageView id="dashboard"/>
+		<ImageView id="refresh"/>
+		<ImageView id="settings"/>
+		<ImageView id="listview"/>
+	</View>
+</Alloy>

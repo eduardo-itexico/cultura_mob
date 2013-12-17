@@ -1,0 +1,7 @@
+<Alloy>
+	<View id="profileView" class="profileView">
+		<View id="container" class="container"></View>
+		<View id="backgroundIosBar" class="backgroundIosBar"></View>
+		<View id="topToolBarContainer" class="topToolBarContainer"></View>
+	</View>
+</Alloy>

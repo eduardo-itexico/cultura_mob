@@ -1,0 +1,1 @@
+/Users/tgarcia/Documents/TitaniumModules/cultura_mob/modules/iphone/ti.imagefactory/1.1.1/example/app.js

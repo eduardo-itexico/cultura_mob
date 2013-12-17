@@ -1,0 +1,14 @@
+
+".container": {
+	backgroundColor: "#F9F9F9",
+  	contentHeight: 'auto',
+  	showVerticalScrollIndicator: true,
+	layout:'vertical'
+}
+".plusButton":{
+	left:10,
+	bottom:Alloy.Globals.CONTENT_BOTTOM,
+	width:38,
+	height:38,
+	image:'/images/bt_add.png'
+}

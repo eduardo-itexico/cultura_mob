@@ -1,0 +1,30 @@
+".profileView":{
+	top:0,
+	left:'100%',// Alloy.Globals.DEVICE_WIDTH,
+	right:0,
+	bottom:0,
+	width:'100%',// Alloy.Globals.DEVICE_WIDTH,
+	backgroundColor:"white",
+	zIndex:1000
+},
+".topToolBarContainer":{
+	top:20,
+	left:0,
+	right:0,
+	height:44
+},
+".backButton":{
+	height:40,
+	width:40,
+	left:0,
+	backgroundColor:"purple"
+},
+".nextButton":{
+	height:40,
+	width:40,
+	right:0,
+	backgroundColor:"yellow"
+},
+".container":{
+	top:0
+}

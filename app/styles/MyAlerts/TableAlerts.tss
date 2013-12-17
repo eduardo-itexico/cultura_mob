@@ -1,0 +1,10 @@
+
+"#tableAlerts" : {
+	top:50,
+	left:3,
+	right:6,
+	bottom:10,
+	borderRadius:5,
+	backgroundColor:"white",
+	separatorColor:"#ccc"
+}

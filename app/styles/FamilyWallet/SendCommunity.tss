@@ -1,0 +1,59 @@
+".container": {
+	//backgroundImage:"/images/bgBlackOpacity39.png"
+}
+
+"#dialogBox":{
+	width:288,
+	height:154,
+	layout:'vertical',
+	backgroundImage:"/images/Messagedialog.png"
+}
+
+"#titleDialog":{
+	text:"Please choose a location(s).",
+	font:{
+		fontWeight:'bold',
+		fontSize:19
+	}
+}
+
+".horizontalLayout":{
+	layout:'horizontal',
+	width:'100%',
+	height:50
+}
+
+
+"#currentLocation":{
+	text:"my current location",
+	color:"white"
+}
+
+"#homeLocation":{
+	text:"my home location",
+	color:"white"
+}
+
+".optionsLeft":{
+	color:'white',
+	left:36,
+	font:{
+		fontWeight:"bold",
+		fontSize:21
+	}
+}
+
+".optionsRight":{
+	color:'white',
+	font:{
+		fontWeight:"bold",
+		fontSize:21
+	},
+	left:198
+}
+
+".leftLbl":{
+	left:20,
+	top:10,
+	width:170
+}

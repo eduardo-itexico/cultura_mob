@@ -1,0 +1,93 @@
+
+"Button" : {
+	height				: 35,
+	left				: 15,
+	right				: 15
+}
+
+"Label" : {
+	textAlign			: 'left',
+	left				: 15
+}
+
+"Switch" : {
+	right				: 15,
+	value				: true
+}
+
+"TextField" : {
+	top					: 5,
+	left				: 15,
+	right 				: 15
+}
+
+".absolute" : {
+	height 				: 40,
+	left				: 0,
+	right				: 0,
+	layout 				: 'absolute'
+}
+
+".blue_separator" : {
+	backgroundColor		: "#1FB9E5",
+	height				: 1,
+	top					: 0,
+	left				: 0,
+	right				: 0
+}
+
+".container" : {
+	backgroundColor		: '#ecf1f4',
+	layout				: 'vertical',
+	scrollType			: 'vertical'
+}
+
+".option" : {
+	textAlign			: 'right',
+	left				: 110,
+	right				: 35
+}
+
+".select_title" : {
+	right				: 100
+}
+
+".bottom_space" : {
+	bottom				: 5
+}
+
+".title" : {
+	top					: 5,
+	left				: 15,
+	height				: 35,
+	color				: 'black',
+	font : {
+		fontSize		: 16
+	}
+}
+
+".vertical" : {
+	height 				: Ti.UI.SIZE,
+	left				: 0,
+	right				: 0,
+	layout 				: 'vertical'
+}
+
+".white" : {
+	backgroundColor		: 'white'
+}
+
+"#delete_btn" : {
+	titleid				: 'delete',
+	top					: 15
+}
+
+"#fapostal" : {
+	returnKeyType		: Ti.UI.RETURNKEY_DONE
+}
+
+"#fastate_field" : {
+	returnKeyType		: Ti.UI.RETURNKEY_DONE
+}
+
+

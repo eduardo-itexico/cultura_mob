@@ -1,0 +1,46 @@
+".containerFamily": {
+	backgroundColor: "white",
+	height: 84,
+	width: '100%'
+	
+}
+
+".imageFamily":{
+	width:70,
+	height:70,
+	image:"/images/im_mask_medium.png",
+	backgroundColor:'gray',
+	left:10,
+	top:9
+}
+
+".titleFamily":{
+	font:{
+		fontSize:18
+	},
+	color: "#000000",
+	left:95,
+	height:40,
+	top:20,
+	right:40
+}
+
+".subTitleFamily":{
+	font:{
+		fontSize:15
+	},
+	color: "#CCCCCC",
+	left:95,
+	top:50,
+	height:20,
+	right:40
+}
+
+
+".bracket":{
+	image:'/images/ic_forward.png',
+	top:30,
+	right:4,
+	width:36,
+	height:36
+}

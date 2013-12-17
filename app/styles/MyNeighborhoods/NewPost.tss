@@ -1,0 +1,127 @@
+"Button":{
+	height: 35
+}
+
+".absolute":{
+	height: 50
+}
+
+".addPhoto":{
+	backgroundSelectedImage: "/images/ic_picture_report_pressed.png",
+	backgroundImage: "/images/ic_picture_report.png",
+	width: 36,
+	height: 36,
+	top: 5,
+	right: 5,
+	borderWidth:0
+}
+
+".cancelBtn": {
+	titleid: 'cancel',
+	left: 5,
+	right: '51%'
+}
+
+".container":{
+	height: Ti.UI.SIZE,
+	layout: 'vertical'
+}
+
+".sendBtn": {
+	titleid: 'send',
+	right: 5,
+	left: '51%'
+}
+
+".topContainer":{
+	backgroundColor: "white",
+	height: 195,
+	top: 0,
+	left: 5,
+	right: 5
+}
+
+"#high_prior":{
+	backgroundColor:'transparent',
+	borderRadius:5,
+	height:Ti.UI.SIZE,
+	bottom: 5
+}
+
+"#highPrior":{
+	textid: 'high_priority',
+	left: 5,
+	bottom: 0,
+	font:{
+		fontSize: 13
+	}
+}
+
+"#highPriorSwitch": {
+	value: false,
+	right: 5
+}
+
+"#notifLbl":{
+	text: 'Send Mobile Notification',
+	left: 5,
+	font:{
+		fontSize: 13
+	}
+}
+
+"#messageTypeContainer": {
+	right: 5,
+	left: 5,
+	height: 40,
+	backgroundColor: "white"
+}
+
+"#messageTypeLabel": {
+	text: 'Message Type',
+	left: 5,
+	font:{
+		fontSize: 14
+	}
+}
+
+"#notifSwitch": {
+	right: 5,
+	value: false
+}
+
+"#postImage":{
+	top: 45,
+	right: 5,
+	bottom: 45,
+	width: 90,
+	borderRadius:5
+}
+
+"#streaming":{
+	top: 0,
+	left: 0,
+	backgroundColor: "cyan",
+	height: 4,
+	width: "0%",
+	borderRadius: 3
+}
+
+"#textFldHide":{
+	left: 5,
+	right: 105,
+	height: 35,
+	top: 5,
+	hintText: "Write your comment",
+	backgroundColor: "transparent",
+	backgroundImage: "/images/transparent.png"
+}
+
+"#textFld":{
+	left: 5,
+	right: 95,
+	top: 5,
+	bottom: 25,
+	backgroundColor: "transparent"
+}
+

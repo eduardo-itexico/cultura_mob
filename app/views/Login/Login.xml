@@ -1,0 +1,17 @@
+<Alloy>
+	<View id="container">
+		<Button id="close" onClick="closeDialog"/>
+		<ImageView id="logo"/>
+		<ScrollView class="fields">
+			<View class="vertical">
+				<TextField id="username" onFocus="normalize" onReturn="goNext"/>
+				<TextField id="password" onFocus="normalize"/>
+			</View>
+			<Label id="forgot_password" onClick="openRetrievePassword"/>
+			<View class="buttons">
+				<Button id="create_new" onClick="openNewAccount"/>
+				<Button id="login" onClick="doLogin"/>
+			</View>
+		</ScrollView>
+	</View>
+</Alloy>

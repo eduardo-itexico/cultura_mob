@@ -1,0 +1,17 @@
+
+"Label" : {
+	textAlign			: 'left',
+	left				: 15
+}
+
+".row" : {
+	backgroundColor		: 'white',
+ 	height				: 40
+}
+
+".separator" : {
+	backgroundColor 	: '#C0C6D0',
+	height 				: 1,
+	top					: null,
+	bottom				: 0
+}

@@ -1,0 +1,23 @@
+{
+	"target": "simulator",
+	"deployType": "development",
+	"deviceFamily": "iphone",
+	"iosSdkPath": "/Users/tgarcia/Library/Application Support/Titanium/mobilesdk/osx/3.1.3.GA/iphone",
+	"appGuid": "1739ec84-a0d8-4a61-90ef-5e31329a3f6d",
+	"tiCoreHash": "77157e1ffaec640cf559356a147b6a4c",
+	"modulesHash": "64c81dac7d8ac776534452b109cb9f74",
+	"nativeModulesHash": "4593736d4a74ec975db15a6e83b6aba6",
+	"gitHash": "222f4d1",
+	"name": "AlertID",
+	"id": "com.alertid.AlertIdPush",
+	"analytics": true,
+	"publisher": "http://www.alertid.com",
+	"url": "http://",
+	"version": "4.0",
+	"description": "AlertID keeping your family safe by keeping you informed!",
+	"copyright": "2011-2012 by AlertID LLC",
+	"guid": "1739ec84-a0d8-4a61-90ef-5e31329a3f6d",
+	"skipJSMinification": true,
+	"forceCopy": false,
+	"forceCopyAll": false
+}

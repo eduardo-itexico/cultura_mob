@@ -1,0 +1,4 @@
+// this is a generated file - DO NOT EDIT
+
+TI_URBANAIRSHIP_OTHER_LDFLAGS=$(inherited) -ObjC -framework security -framework CoreTelephony
+OTHER_LDFLAGS=$(inherited) $(TI_URBANAIRSHIP_OTHER_LDFLAGS) 

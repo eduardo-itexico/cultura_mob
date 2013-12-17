@@ -1,0 +1,127 @@
+".commentView": {
+	backgroundColor: "white",
+	left:10,
+	right:10,
+	top:10,
+	borderColor:"#cccccc",
+	borderWidth:1,
+	layout:"vertical",
+	height:Ti.UI.SIZE
+},
+".commentHeader": {
+	top:5,
+	left:5,
+	right:5,
+	height:60
+},
+".imageUser": {
+	left:0,
+	//height:60,
+	width:60
+},
+".titleLbl": {
+	left:70,
+	top:10,
+	color:"#000000",
+	font:{
+		fontSize:16
+	}
+},
+".subTitleLbl": {
+	top:27,
+	left:70,
+	color:"#8b8b8b",
+	font:{
+		fontSize:14
+	}
+},
+"#commentOptions": {
+	backgroundSelectedImage:"/images/bt_down_arrow_pressed.png",
+	backgroundImage:"/images/bt_down_arrow.png",
+	top:3,
+	right:3,
+	width:36,
+	height:36,
+	borderWidth:0
+},
+".commentContent": {
+	left:5,
+	top:10,
+	right:5,
+	layout:"vertical",
+	height:Ti.UI.SIZE
+},
+".hrefLbl": {
+	left:0,
+	color:"#17B8E4",
+	font:{
+		fontSize:14,
+		fontWeight: "bold"
+	},
+	visible:false
+},
+".textLbl": {
+	top:5,
+	left:0,
+	color:"#333",
+	font:{
+		fontSize:14
+	}
+},
+".commentImage": {
+	top:5,
+	left:0,
+	right:0,
+	visible:false
+},
+".commentFooter": {
+	top:10,
+	left:5,
+	right:5,
+	backgroundColor:"transparent",
+	height:42
+},
+".likesContainer": {
+	left:0,
+	backgroundColor:"transparent",
+	width:Ti.UI.SIZE
+},
+".likeIcon": {
+	backgroundSelectedImage:"/images/ic_like_pressed.png",
+	backgroundImage:"/images/ic_like.png",
+	left:0,
+	bottom:10,
+	width:36,
+	height:36,
+	borderWidth:0
+},
+"#likeLbl": {
+	left:23,
+	color:"#8b8b8b",
+	font:{
+		fontSize:10
+	},
+	visible:false
+},
+".repliesContainer": {
+	right:0,
+	backgroundColor:"transparent",
+	width:Ti.UI.SIZE
+},
+".repliesIcon": {
+	backgroundSelectedImage:"/images/ic_comment_pressed.png",
+	backgroundImage:"/images/ic_comment.png",
+	right:0,
+	bottom:10,
+	height:36,
+	width:36,
+	borderWidth:0
+},
+"#repliesLbl": {
+	right:36,
+	color:"#8b8b8b",
+	font:{
+		fontSize:10
+	}
+}
+

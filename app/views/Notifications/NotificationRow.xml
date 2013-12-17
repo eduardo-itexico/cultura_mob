@@ -1,0 +1,12 @@
+<Alloy>
+	<View id="row" class="row">
+		<View class="vertical">
+			<Label id="oggroup"></Label>
+			<Label id="nmtimestamp"></Label>
+			<Label id="message"></Label>
+			<View class="space"></View>
+		</View>
+		<ImageView id="arr" class="arr_right"></ImageView>
+		<View class="separator"></View>
+	</View>
+</Alloy>

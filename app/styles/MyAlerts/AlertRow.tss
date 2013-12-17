@@ -1,0 +1,48 @@
+
+"Label" : {
+	left			: 15
+}
+
+"TableViewRow" : {
+	height			: Ti.UI.SIZE
+}
+
+".absolute" : {
+	height			: Ti.UI.SIZE
+}
+
+".vertical" : {
+	height			: Ti.UI.SIZE,
+	layout			: 'vertical',
+	left			: 0,
+	right			: 100
+}
+
+"#title" : {
+	color			: 'black',
+	font : {
+		fontSize	: 14
+	}
+}
+
+"#subtitle" : {
+	color			: '#aaa',
+	font : {
+		fontSize	: 10
+	}
+}
+
+"#description" : {
+	bottom			: 5,
+	font : {
+		fontSize	: 12
+	}
+}
+
+"#icon" : {
+	width			: 35,
+	heigh			: 35,
+	right			: 15
+}
+
+

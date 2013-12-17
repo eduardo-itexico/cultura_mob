@@ -1,0 +1,32 @@
+<h1>Using Urban Airship with Titanium SDK</h1>
+<p><emphasis>NOTE: If you are using version 1.7.3 or newer of Titanium SDK then you do not need to perform the steps outlined in this document.</emphasis></p>
+<p>The Urban Airship module requires some additional initialization functionality that is not available in Titanium SDK 1.7.2 or earlier. An additional initialization step is required when the Titanium application is created. This additional step is located in the generated application java file. Since this file is generated every time that you build your project, it is necessary for you to create a persistent application java file that will be used each time that you build your project.</p>
+<p>You will need to perform the following steps for the Urban Airship module to function properly.</p>
+<h2>Step 1: Locate the generated application java file</h2>
+<ul>
+<li>Build and run your application on either an Android device or emulator.</li>
+<li>In your project's root directory, locate the 'build/android/gen' directory</li>
+<li>Locate the <application-name>Application.java file in the directory hierarchy. The directory hierarchy is based on your application ID. For example, if your application ID was 'com.mycompany.myapp', then the file would be called 'myappApplication.java' and would be located in the 'gen/com/mycompany/myapp' directory.</li>
+</ul>
+<h2>Step 2: Create platform directory</h2>
+<ul>
+<li>In your project's root directory, create a 'platform/android' directory</li>
+<li>Create a directory hierarchy identical to that in step 1 under this new directory. For example, you would create a 'gen/com/mycompany/myapp' directory under the 'platform/android' directory.</li>
+</ul>
+<h2>Step 3: Create persistent application java file</h2>
+<ul>
+<li>Copy the generated <application-name>Application.java file (from step 1) into the platform directory (from step 2)</li>
+<li>Edit the <application-name>Application.java file</li>
+<li>Locate the 'onCreate' method</li>
+<li>Add the following code at the end of the method:
+<pre>
+    ti.modules.titanium.urbanairship.UrbanAirshipModule.onAppCreate(this);
+</pre></li>
+<li>Save the file</li>
+</ul>
+<h2>Step 4: Perform a clean build of your application</h2>
+<ul>
+<li>Select "Project" and then "Clean.." from the Ti Studio menu</li>
+<li>Select the application project and click "OK"</li>
+<li>Rebuild the application</li>
+</ul>
