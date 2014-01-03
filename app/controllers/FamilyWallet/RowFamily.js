@@ -41,4 +41,5 @@ switch(elemento.movimiento){
 		precio = elemento.precio_venta;
 		break;	
 }
+
 $.kinshipProfile.text			=  precio;
