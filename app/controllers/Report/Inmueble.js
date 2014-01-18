@@ -1,3 +1,4 @@
+var APP = require("/core");
 var args 	= arguments[0] || {};
 var params  = args.params;
 var actual  = params.actualCategory ? params.actualCategory : ""; 
@@ -13,6 +14,7 @@ function onClickOptions(e){
 	  var object = {value:e.rowData.title,
 				  	index:"inmueble"};
 	  params.controller.actualCategory(object);
+	  APP.popOut();
 	  //controller.actualOption(getOptionsSelected());
 }
 

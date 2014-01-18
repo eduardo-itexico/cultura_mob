@@ -112,8 +112,8 @@ function clickFields(e){
             									  ($.cochera.value? $.cochera.value : "0")+"/"+
             									  ($.superficieDesde.value? $.superficieDesde.value : "0")+"/"+
             									  ($.superficieHasta.value? $.superficieHasta.value : "0")+"/"+
-            									  ($.m2Desde.value? $.m2Desde.value : "0")+"/"+
-            									  ($.m2Hasta.value? $.m2Hasta.value : "0"),
+            									  ($.precioM2Desde.value? $.precioM2Desde.value : "0")+"/"+
+            									  ($.precioM2Hasta.value? $.precioM2Hasta.value : "0"),
             type    : 'GET',
             format  : 'JSON'
         };
@@ -175,7 +175,7 @@ function actualCategory(category){
 					actual_movimiento  = "Traspaso";
 				break;
 			}
-			$.movimiento.value = actual_movimiento ;	
+			$.movimiento.value = actual_category.value ;	
 		break;
 		case "precio_desde":
 			actual_precio_desde = category;

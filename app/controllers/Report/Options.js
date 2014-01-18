@@ -1,3 +1,4 @@
+var APP = require("/core");
 var Utils = require("/utils");
 
 var args 	= arguments[0] || {};
@@ -25,6 +26,7 @@ function onClickOptions(e){
 	  var state = e.rowData.hasCheck;
 	  e.source.hasCheck = state ? false : true;
 	  controller.actualOption(getOptionsSelected());
+	  APP.popOut();
 } 
 
 function getOptionsSelected(){

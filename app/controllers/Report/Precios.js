@@ -1,3 +1,4 @@
+var APP = require("/core");
 var args 	= arguments[0] || {};
 var params  = args.params;
 var actual  = params.actualCategory ? params.actualCategory : "";
@@ -47,6 +48,7 @@ function onClickOptions(e){
 				  	index:option,
 				  	precio:e.rowData.valor};
 	  params.controller.actualCategory(object);
+	  APP.popOut();
 	  //controller.actualOption(getOptionsSelected());
 }
 

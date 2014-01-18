@@ -11,7 +11,7 @@ var total_paginado = 10;
 var descargando	   = false;
 DB.init(function(){});
 var dataInmuebles = args && args.params && args.params.data ? args.params.data : null;
-Ti.API.info('ARGS------'+JSON.stringify(dataInmuebles));
+
 
 if(dataInmuebles && dataInmuebles.length > 0){
 		showRows(dataInmuebles);
