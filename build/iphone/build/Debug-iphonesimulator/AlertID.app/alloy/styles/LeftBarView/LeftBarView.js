@@ -1,1 +1,1 @@
-/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/alloy/styles/LeftBarView/LeftBarView.js
+/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/iphone/alloy/styles/LeftBarView/LeftBarView.js

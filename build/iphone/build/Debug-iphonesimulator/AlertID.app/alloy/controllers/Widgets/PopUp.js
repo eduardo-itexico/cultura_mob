@@ -1,1 +1,1 @@
-/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/alloy/controllers/Widgets/PopUp.js
+/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/iphone/alloy/controllers/Widgets/PopUp.js

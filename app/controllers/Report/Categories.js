@@ -11,7 +11,7 @@ function onClickOptions(e){
 	  cleanAllRows();
 	  e.source.hasCheck = state ? false : true;
 	  var object = {value:e.rowData.title,
-				  	index:e.index};
+				  	index:"movimiento"};
 	  params.controller.actualCategory(object);
 	  //controller.actualOption(getOptionsSelected());
 }

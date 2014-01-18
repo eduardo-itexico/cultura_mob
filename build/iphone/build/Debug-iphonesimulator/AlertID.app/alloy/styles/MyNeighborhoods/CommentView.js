@@ -1,1 +1,1 @@
-/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/alloy/styles/MyNeighborhoods/CommentView.js
+/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/iphone/alloy/styles/MyNeighborhoods/CommentView.js

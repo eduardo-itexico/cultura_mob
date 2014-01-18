@@ -1,1 +1,1 @@
-/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/alloy/styles/RightBarView/GroupsRow.js
+/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/iphone/alloy/styles/RightBarView/GroupsRow.js

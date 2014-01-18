@@ -36,6 +36,16 @@
 	right:40
 }
 
+".movimientoFamily":{
+	font:{
+		fontSize:15
+	},
+	color: "#CCCCCC",
+	right:10,
+	top:10,
+	height:20,
+	right:40
+}
 
 ".bracket":{
 	image:'/images/ic_forward.png',

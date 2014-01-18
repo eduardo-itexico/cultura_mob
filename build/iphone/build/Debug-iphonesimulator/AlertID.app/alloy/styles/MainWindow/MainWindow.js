@@ -1,1 +1,1 @@
-/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/alloy/styles/MainWindow/MainWindow.js
+/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/iphone/alloy/styles/MainWindow/MainWindow.js

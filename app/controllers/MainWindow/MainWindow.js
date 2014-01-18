@@ -18,7 +18,8 @@ $.rightBar.add(APP.optionbar.getView());
 function poslayoutFnc(){
     APP.DEVICE_WIDTH    = $.win.size.width;
     APP.DEVICE_HEIGHT   = $.win.size.height;
-    APP.handleNavigation("MyAlerts/MyAlerts");
+    //TODO: Here we change the first option opened
+    APP.handleNavigation("Report/Report");
     $.win.removeEventListener("postlayout",poslayoutFnc);
 }
 // CODE

@@ -31,14 +31,14 @@ exports.request = function(_params,_callback) {
 		}
 		
 		_callback(data);
-	}
+	};
 	
 	anXhr.onerror = function(e) {
 		//Ti.API.info("1 -> "+JSON.stringify(this.responseText));
 		//alert('Your Internet connection failed.  Please try again.');
 		var data={_result:0};
 		_callback(data);
-	}
+	};
 	
 	anXhr.open(_params.type,_params.url);
 	anXhr.setTimeout(45 * 1000);

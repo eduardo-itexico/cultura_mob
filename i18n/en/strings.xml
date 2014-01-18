@@ -220,4 +220,8 @@
 	<string name="url_ourstory">http://alertid.com/our-story.asp</string>
 	<!--MY PROJEC-----T-->
 	<string name="url_inmuebles_paginados">http://oficial.culturainmobiliaria.com.mx/inmuebles/getInmueblesPaginados/</string>
+	<string name="path_base_img_inmuebles_main">http://cultura.ding.mx/files/imagenes/inmuebles/main/thumb/principal/</string>
+	<string name="path_base_img_inmuebles_galeria">http://cultura.ding.mx/files/imagenes/inmuebles/galeria/</string>
+	<string name="path_base_img_inmuebles_asesor">http://cultura.ding.mx/files/imagenes/usuarios/main/thumb/</string>
+	<string name="find_inmuebles_mobile">http://www.culturainmobiliaria.com.mx/inmuebles/findFromMobile/</string>
 </resources>

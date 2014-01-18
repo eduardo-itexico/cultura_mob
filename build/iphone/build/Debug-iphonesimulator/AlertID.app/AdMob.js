@@ -1,1 +1,1 @@
-/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/AdMob.js
+/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/iphone/AdMob.js

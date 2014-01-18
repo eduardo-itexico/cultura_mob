@@ -1,1 +1,1 @@
-/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/animation.js
+/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/iphone/animation.js

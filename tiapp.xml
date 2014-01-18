@@ -5,8 +5,8 @@
     <version>4.0</version>
     <publisher>http://www.alertid.com</publisher>
     <url>http://</url>
-    <description>AlertID keeping your family safe by keeping you informed!</description>
-    <copyright>2011-2012 by AlertID LLC</copyright>
+    <description>Description</description>
+    <copyright>2013</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>
@@ -106,6 +106,7 @@
     </mobileweb>
     <modules>
         <module platform="android">ti.map</module>
+        <module platform="iphone">ti.map</module>
         <module platform="android">ti.urbanairship</module>
         <module platform="iphone">ti.urbanairship</module>
         <module platform="iphone">ti.imagefactory</module>

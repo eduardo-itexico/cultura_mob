@@ -1,1 +1,1 @@
-/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/db.js
+/Users/tgarcia/Documents/TitaniumModules/cultura_mob/Resources/iphone/db.js

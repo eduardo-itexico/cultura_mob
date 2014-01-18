@@ -1,6 +1,6 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2013 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2014 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  *
@@ -15,22 +15,19 @@
 
 + (NSMutableDictionary*) copyDefaults
 {
-	NSMutableDictionary * _property = [[NSMutableDictionary alloc] init];
-	
-	[_property setObject:[TiUtils stringValue:@"dp"] forKey:@"ti.ui.defaultunit"];
-	[_property setObject:[TiUtils stringValue:@"test"] forKey:@"ti.deploytype"];
-	[_property setObject:[NSNumber numberWithBool:[TiUtils boolValue:@"true"]] forKey:@"ti.android.fastdev"];
-	[_property setObject:[NSNumber numberWithBool:[TiUtils boolValue:@""]] forKey:@"ti.android.debug"];
-	[_property setObject:[NSNumber numberWithBool:[TiUtils boolValue:@"true"]] forKey:@"ti.android.bug2373.finishfalseroot"];
-	return _property;
+	return nil;
 }
 
 + (NSDictionary*) launchUrl {
-    static BOOL launched = NO;
-    if (!launched) {
-        launched = YES;
-        return nil;
-    } else { return nil;}
+	static BOOL launched = NO;
+	if (!launched) {
+		launched = YES;
+		
+			return nil;
+		
+	} else {
+		return nil;
+	}
 }
- 
+
 @end

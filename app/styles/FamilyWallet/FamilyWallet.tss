@@ -12,3 +12,9 @@
 	height:38,
 	image:'/images/bt_add.png'
 }
+
+"#wrapper":{
+	width: Ti.UI.FILL, 
+	height: Ti.UI.SIZE, 
+	layout: 'vertical'
+}

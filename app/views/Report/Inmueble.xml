@@ -1,0 +1,12 @@
+<Alloy>
+	<View class="container">
+		<TableView id="optionTV" onClick="onClickOptions">
+                <TableViewRow title="Casa"/>
+                <TableViewRow title="Comercio"/>
+                <TableViewRow title="Departamento"/>
+                <TableViewRow title="Industria"/>
+                <TableViewRow title="Rancho"/>
+                <TableViewRow title="Terreno"/>
+        </TableView>
+	</View>
+</Alloy>

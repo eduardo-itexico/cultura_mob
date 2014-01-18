@@ -1,51 +1,76 @@
 <Alloy>
 	<ScrollView class="containerProfile" id="mainContainerProfile">
 			<View class="blank"></View>
-			<View  class="layoutHorizontal">
-				<!--ImageView id="photoProfile"></ImageView-->
-				<View id="avatar_view" class="avatar">
-                    <ScrollView class="avatar">
-                    	<ImageView id="photoProfile"/>
-                    </ScrollView>
-                    <ImageView id="avatar_mask" class="avatar"/>
-                </View>
-				<View id="" class="layoutVertical">
-					<View id="actionsContainer"  onClick="actionsClick">
-						<Button class="trashButton" id="deleteBtn" id_profile=""></Button>
-						<Button class="helpButton"  id="helpBtn" id_profile=""></Button>
-						<Button class="shareButton" id="shareBtn" id_profile="" photo="" blobImage="" imgType=""></Button>
-					</View>
-					<Label id="nameLbl" text="Name" class="labelTitle"></Label>
-					<TextField id="nameProfile" hintText="Name" class="inputProfile"></TextField>
-					<TextField id="midleNameProfile" hintText="Middle Name" class="inputProfile"></TextField>
-					<TextField id="lastNameProfile" hintText="Last Name" class="inputProfile"></TextField>
-				</View>	
+			<View id="mainImage">
+				<ImageView id="imagenPrincipal" onClick="showGaleria"></ImageView>
+				<View class="containerMainData">
+					<Label id="tipo" class="yellowTitle" left="5"  ></Label>
+					<Label id="movimiento" class="yellowTitle" left="5" ></Label>
+					<Label id="colonia" class="whiteTitle" left="5" ></Label>
+					<Label id="precio" class="price" left="5"></Label>
+				</View>
 			</View>
-			<View class="layoutHorizontal">
-				<TextField id="nickProfile" hintText="Nick Name" class="inputProfile"></TextField>
-				<Label id="descriptionLbl" text="Description" class="labelTitle" ></Label>
-				<TextField id="birthdayProfile" hintText="Birthdate" class="inputProfile"></TextField>
-				<TextField id="genderProfile" hintText="Gender" class="inputProfile"></TextField>
-				<TextField id="heightProfile" hintText="Height" class="inputProfile"></TextField>
-				<TextField id="hairProfile" hintText="Hair color" class="inputProfile"></TextField>
-				<TextField id="weightProfile" hintText="Weight" class="inputProfile"></TextField>
-				<TextField id="eyesProfile" hintText="Eye color" class="inputProfile"></TextField>
-				<TextField id="birthCityProfile" hintText="Birth City" class="inputProfile"></TextField>
-				<TextField id="glassesProfile" hintText="Glasses" class="inputProfile"></TextField>
-				<TextArea id="identifyingProfile" ></TextArea>
-				<Label id="contactLbl" text="Contact Information" class="labelTitle" ></Label>
-				<TextField id="address1Profile" hintText="Address 1" class="inputProfile"></TextField>
-				<TextField id="address2Profile" hintText="Address 2" class="inputProfile"></TextField>
-				<TextField id="cityProfile" hintText="City" class="inputProfile"></TextField>
-				<TextField id="stateProfile" hintText="State" class="inputProfile"></TextField>
-				<TextField id="zipProfile" hintText="Zip" class="inputProfile"></TextField>
-				<TextField id="homePhoneProfile" hintText="Home Phone" class="inputProfile"></TextField>
-				<TextField id="cellPhoneProfile" hintText="Cell Phone" class="inputProfile"></TextField>
-				<Label id="guardianLbl" text="Guardian Information" class="labelTitle" ></Label>
-				<TextField id="name1Profile" hintText="Name 1" class="inputProfile"></TextField>
-				<TextField id="phone1Profile" hintText="Phone " class="inputProfile"></TextField>
-				<TextField id="name2Profile" hintText="Name 2" class="inputProfile"></TextField>
-				<TextField id="phone2Profile" hintText="Phone " class="inputProfile"></TextField>
-			</View>		
+			<View class="layoutVertical" id="dataContainer">
+				<Label id="descripcion" class="redTitle">Descripción</Label>
+				<Label id="contentDescripcion" class="normalFont"></Label>
+				<Label id="descripcion" class="redTitle">Características</Label>
+				<View class="layoutHorizontal" >
+					<View class="halfVertical">
+						<View class="layoutHorizontal">
+							<Label class="whiteBold">Plantas:</Label><Label id="plantas" class="whiteNormal"></Label>	
+						</View>
+						<View class="layoutHorizontal">
+							<Label class="whiteBold">Recámaras:</Label><Label id="recamaras" class="whiteNormal"></Label>	
+						</View>
+						<View class="layoutHorizontal">
+							<Label class="whiteBold">Baños:</Label><Label id="banos" class="whiteNormal"></Label>	
+						</View>
+						<View class="layoutHorizontal">
+							<Label class="whiteBold">Medios baños:</Label><Label id="medios_banos" class="whiteNormal"></Label>	
+						</View>
+						<View class="layoutHorizontal">
+							<Label class="whiteBold">Cochera:</Label><Label id="cochera" class="whiteNormal"></Label>	
+						</View>
+					</View>
+					<View class="halfVertical">
+						<View class="layoutHorizontal">
+							<Label class="whiteBold">M2:</Label><Label id="superficie_terreno" class="whiteNormal"></Label>	
+						</View>
+						<View class="layoutHorizontal">
+							<Label class="whiteBold">M2 Const.:</Label><Label id="superficie_construida" class="whiteNormal"></Label>	
+						</View>
+						<View class="layoutHorizontal">
+							<Label class="whiteBold">Jardin:</Label><Label id="jardin" class="whiteNormal"></Label>	
+						</View>
+						<View class="layoutHorizontal">
+							<Label class="whiteBold">Alberca:</Label><Label id="alberca" class="whiteNormal"></Label>	
+						</View>
+						<View class="layoutHorizontal">
+							<Label class="whiteBold">Cuarto de Servicio:</Label><Label id="cuarto_servicio" class="whiteNormal"></Label>	
+						</View>
+					</View>
+				</View>
+				<Label class="redTitle">Asesor</Label>
+				<View class="asesorContainer">
+					<ImageView id="imagenAsesor" ></ImageView>
+					<View class="containerMainData">
+						<Label id="nombre_asesor" class="fontBoldWhite"></Label>
+						<Label id="correo" class="whiteNormal"></Label>	
+						<View class="layoutHorizontal">
+							<Label  class="fontBoldWhite" >Celular</Label><Label id="celular" class="whiteNormal"></Label>	
+						</View>
+						<View class="layoutHorizontal">
+							<Label  class="fontBoldWhite" >Oficina</Label><Label id="telefono" class="whiteNormal"></Label>	
+						</View>
+						<View class="layoutHorizontal">
+							<Label  class="fontBoldWhite" >Otro</Label><Label id="telefono_oficina" class="whiteNormal"></Label>
+						</View>
+					</View>
+					
+				</View>
+				<Button id="solicitarInformacion" title="Solicitar Informes"></Button>
+				<View id="mapview" ns="Alloy.Globals.Map" />
+			</View>	
+			
 	</ScrollView>
 </Alloy>

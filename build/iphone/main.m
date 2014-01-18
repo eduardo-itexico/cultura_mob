@@ -13,8 +13,8 @@ NSString * const TI_APPLICATION_PUBLISHER = @"http://www.alertid.com";
 NSString * const TI_APPLICATION_URL = @"http://";
 NSString * const TI_APPLICATION_NAME = @"AlertID";
 NSString * const TI_APPLICATION_VERSION = @"4.0";
-NSString * const TI_APPLICATION_DESCRIPTION = @"AlertID keeping your family safe by keeping you informed!";
-NSString * const TI_APPLICATION_COPYRIGHT = @"2011-2012 by AlertID LLC";
+NSString * const TI_APPLICATION_DESCRIPTION = @"Description";
+NSString * const TI_APPLICATION_COPYRIGHT = @"2013";
 NSString * const TI_APPLICATION_GUID = @"1739ec84-a0d8-4a61-90ef-5e31329a3f6d";
 BOOL const TI_APPLICATION_ANALYTICS = true;
 

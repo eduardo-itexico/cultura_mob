@@ -1,16 +1,10 @@
 <Alloy>
 	<View class="container">
 		<TableView id="optionTV" onClick="onClickOptions">
-                <TableViewRow title="Activity in-progress"/>
-                <TableViewRow title="Community information"/>
-                <TableViewRow title="Drug activity"/>
-                <TableViewRow title="Fire"/>
-                <TableViewRow title="Graffiti"/>
-                <TableViewRow title="No category"/>
-                <TableViewRow title="Stray animal"/>
-                <TableViewRow title="Suspicious activity"/>
-                <TableViewRow title="Suspicious vehicle"/>
-                <TableViewRow title="Other"/>
+                <TableViewRow title="Comprar"/>
+                <TableViewRow title="Rentar"/>
+                <TableViewRow title="Comprar/Rentar"/>
+                <TableViewRow title="Traspasar"/>
         </TableView>
 	</View>
 </Alloy>

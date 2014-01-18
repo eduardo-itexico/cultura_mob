@@ -1,45 +1,63 @@
-var Utils  = require("/utils");
+var Utils  = require("utils");
 
 var args 	= arguments[0] || {};
 var elemento 	= args.element;
-elemento = elemento.Inmueble;
-var precio		= 0;
+elemento 	= elemento.Inmueble;
+var colonia = args.element.Colonia;
+
 //Ti.API.info('MEMBERS---------------->'+args.element);
-$.viewProfile.id_profile 		=  elemento.id;
+$.viewProfile.elemento 		=  args.element;
 
-/*
-if(element.blobimage){
-    //Ti.API.info("[atention] "+JSON.stringify(element));
-	var file = Ti.Filesystem.createTempFile(Ti.Filesystem.resourcesDirectory);
-	file.write(element.blobimage);
-	$.imageProfile.backgroundImage 	= file.nativePath;
-	if(OS_ANDROID){
-	    $.imageProfile.backgroundImage = element.m_photo;
+function numberToCurrency(number, decimalSeparator, thousandsSeparator, nDecimalDigits){
+    //default values
+    decimalSeparator = decimalSeparator || '.';
+    thousandsSeparator = thousandsSeparator || ',';
+    nDecimalDigits = nDecimalDigits == null? 2 : nDecimalDigits;
+
+    var fixed = number.toFixed(nDecimalDigits), //limit/add decimal digits
+        parts = new RegExp('^(-?\\d{1,3})((?:\\d{3})+)(\\.(\\d{'+ nDecimalDigits +'}))?$').exec( fixed ); //separate begin [$1], middle [$2] and decimal digits [$4]
+
+    if(parts){ //number >= 1000 || number <= -1000
+        return parts[1] + parts[2].replace(/\d{3}/g, thousandsSeparator + '$&') + (parts[4] ? decimalSeparator + parts[4] : '');
+    }else{
+        return fixed.replace('.', decimalSeparator);
+    }
+}
+
+
+function capitalize(cadena){
+	return  cadena[0].toUpperCase() + cadena.slice(1).toLowerCase();
+};
+
+function getPrecio(elemento){
+	var precio = "$ 0.00";
+	switch(elemento.movimiento){
+		case "Venta":
+			precio = numberToCurrency( parseFloat(elemento.precio_venta));
+			break;
+		case "Renta":
+			precio = numberToCurrency( parseFloat(elemento.precio_renta));
+			break;
+		case "Venta/Renta":
+			precio = numberToCurrency( parseFloat(elemento.precio_venta))  + " /$ " +numberToCurrency( parseFloat(elemento.precio_renta)) ;
+			break;
+		case "Traspaso":
+			precio = numberToCurrency( parseFloat(elemento.precio_venta));
+			break;	
 	}
-}
-*/
-
-$.nameProfile.text 		= elemento.tipo;
-//precio = parseFloat(elemento.precio_venta);
-//elemento.precio_venta = String.formatCurrency(elemento.precio_venta);
-
-//precio = precio.replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
-//elemento.precio_venta 	= Utils.toMoney(elemento.precio_venta);
-//elemento.precio_renta 	= Utils.toMoney(elemento.precio_renta);
-
-switch(elemento.movimiento){
-	case "Venta":
-		precio = elemento.precio_venta;
-		break;
-	case "Renta":
-		precio = elemento.precio_renta;
-		break;
-	case "Venta/Renta":
-		precio = elemento.precio_venta + " " +elemento.precio_renta ;
-		break;
-	case "Traspaso":
-		precio = elemento.precio_venta;
-		break;	
+	return precio;
 }
 
-$.kinshipProfile.text			=  precio;
+
+switch(elemento.inmueble){
+	case "Departamento":
+		elemento.inmueble = "Depto.";
+	break;
+}
+
+
+$.kinshipProfile.text	=  "$ " + getPrecio(elemento);
+$.movimiento.text		= elemento.movimiento;
+$.nameProfile.text 		= elemento.inmueble + " " + capitalize(colonia.nombre);
+var imagen_principal 	= L('path_base_img_inmuebles_main') + elemento.imagen_principal;
+$.imageProfile.image		= imagen_principal;

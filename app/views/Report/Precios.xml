@@ -1,0 +1,7 @@
+<Alloy>
+	<View class="container">
+		<TableView id="optionTV" onClick="onClickOptions">
+               
+        </TableView>
+	</View>
+</Alloy>

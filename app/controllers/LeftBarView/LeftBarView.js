@@ -50,7 +50,7 @@ function onClickMenu(e){
 function highligthSelection(self){
     if( !self ){
         tempOption.backgroundImage = "/images/transparent.png";
-        tempOption                 = $.myAlerts;
+        tempOption                 = $.familyWallet;
         tempOption.backgroundImage = "/images/bg_dashboard_selector.png";
     }
     else
@@ -78,7 +78,7 @@ APP.sessionButton = {
 }; 
 APP.notifications.badge = $.notification_number;
 
-tempOption                  = $.myAlerts;
+tempOption                  = $.familyWallet;
 tempOption.backgroundImage  = "/images/bg_dashboard_selector.png";
 
 /** EXPORTS **/

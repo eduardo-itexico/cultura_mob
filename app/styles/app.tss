@@ -5,18 +5,8 @@
 * Margins are ok (top + bottom, left + right)
 */
 
-"Button":{
-	backgroundSelectedImage:'/images/bgBlackOpacity39.png',
-	backgroundImage: "/images/transparent.png",
-	color: "#17B8E4",
-	borderColor: "#18b2e0",
-	borderWidth: 1,
-	borderRadius: 1,
-	style: Ti.UI.iPhone.SystemButtonStyle.PLAIN,
-	font: {
-		fontSize: 14
-	}
-},
+
+
 "Label": {
 	color: '#333',
 	font: {

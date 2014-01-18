@@ -33,4 +33,6 @@ Utils.toMoney = function(precio){
 	return precio.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
 };
 
-module.exports = Utils;
+exports.capitalize = function(cadena){
+	return  cadena[0].toUpperCase() + cadena.slice(1);
+};

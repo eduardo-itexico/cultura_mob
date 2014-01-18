@@ -1,30 +1,68 @@
 <Alloy>
 	<ScrollView class="container">
 		<View class="blank"/>
-		<View id="borderedSquare">
-			<View class="layoutHorizontal" id="containerData">
-				<TextArea id="contentTextArea"></TextArea>
-				<ImageView id="imageCaptured"></ImageView>
+		<View id="borderedSquare" layout="vertical">
+        	<TextField id="movimiento" hintText="Selecciona el movimiento" class="inputProfile" onClick="clickFields" enabled="false"></TextField>
+        	<TextField id="inmueble" hintText="Selecciona el inmueble" class="inputProfile" onClick="clickFields" enabled="false"></TextField>
+        	<TextField id="precio_desde" hintText="Precio desde" class="inputProfile" onClick="clickFields" enabled="false"></TextField>
+        	<TextField id="precio_hasta" hintText="Precio hasta" class="inputProfile" onClick="clickFields" enabled="false"></TextField>
+        	<TextField id="campoClave" hintText="Palabra clave" class="inputProfile"></TextField>
+        	<View class="layoutVertical" id="viewAvanzada" >
+	        	<View class="layoutHorizontal">
+	        		<Label class="lblFields">BAÑOS</Label>
+	        		<TextField id="banos"  class="inputHalfProfile" value="0"></TextField>
+	        		<Button class="btnAdd" onClick="clickSpinner" direction="increase">-</Button>
+	        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
+	        	</View>
+	        	
+		        	<View class="layoutHorizontal">
+		        		<Label class="lblFields">MEDIOS BAÑOS</Label>
+		        		<TextField id="banos"  class="inputHalfProfile" value="0"></TextField>
+		        		<Button class="btnAdd" onClick="clickSpinner" direction="increase">-</Button>
+		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
+		        	</View>
+		        	<View class="layoutHorizontal">
+		        		<Label class="lblFields">COCHERA</Label>
+		        		<TextField id="banos"  class="inputHalfProfile" value="0"></TextField>
+		        		<Button class="btnAdd" onClick="clickSpinner" direction="increase">-</Button>
+		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
+		        	</View>
+		        	<View class="layoutHorizontal">
+		        		<Label class="lblFields">RECAMARAS</Label>
+		        		<TextField id="banos"  class="inputHalfProfile" value="0"></TextField>
+		        		<Button class="btnAdd" onClick="clickSpinner" direction="increase">-</Button>
+		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
+		        	</View>
+		        	<View class="layoutHorizontal">
+		        		<Label class="lblFields">SUP M2 DESDE"</Label>
+		        		<TextField id="banos"  class="inputHalfProfile" value="0" step="100"></TextField>
+		        		<Button class="btnAdd" onClick="clickSpinner"  direction="increase">-</Button>
+		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
+		        	</View>
+		        	<View class="layoutHorizontal">
+		        		<Label class="lblFields">SUP M2 HASTA</Label>
+		        		<TextField id="banos"  class="inputHalfProfile" value="0" step="100"></TextField>
+		        		<Button class="btnAdd" onClick="clickSpinner"  direction="increase">-</Button>
+		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
+		        	</View>
+		        	<View class="layoutHorizontal">
+		        		<Label class="lblFields">$ M2 DESDE</Label>
+		        		<TextField id="banos"  class="inputHalfProfile" value="0" step="1000"></TextField>
+		        		<Button class="btnAdd" onClick="clickSpinner"  direction="increase">-</Button>
+		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
+		        	</View>
+		        	<View class="layoutHorizontal">
+		        		<Label class="lblFields">$ M2 HASTA</Label>
+		        		<TextField id="banos"  class="inputHalfProfile" value="0" step="1000"></TextField>
+		        		<Button class="btnAdd" onClick="clickSpinner"  direction="increase">-</Button>
+		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
+		        	</View>
 			</View>
-			<View id="actionsContainer" onClick="clickActionsBar">
-				<Button id="cameraButton" class="buttonsBar"></Button>
-				<Button id="configButton" class="buttonsBar"></Button>
-				<Button id="filesButton" class="buttonsBar"></Button>
-				<Button id="shareButton" class="buttonsBar"></Button>
+			<View class="containerBotonera">
+					<Button id="avanzada" onClick="clickFields" title="Avanzada" class="btnAction" left="10"></Button>
+					<Button id="buscar" onClick="clickFields" title="Buscar" class="btnAction" right="10"></Button>	
 			</View>
 		</View>
-		<View class="caption">
-			<Label class="redText">If this is an emergency, DIAL 911</Label>
-			<Label class="bigWhiteText">Share Suspicious Activity With</Label>
-			<Label class="mediumWhiteText">Your Neighbors </Label>
-			<Label class="mediumWhiteText">Law Enforcement</Label>
-			<Label class="mediumWhiteText">Local Media And</Label>
-			<Label class="mediumWhiteText">Homeland Security</Label>
-			<View class="caption">
-				<Label class="smallWhiteText">Protect your family, neighborhood and our Country </Label>
-				<Label class="smallWhiteText">instantly and anonymously</Label>
-			</View>
-		</View>
-		<View class="ad_space"/>
+		
 	</ScrollView>
 </Alloy>

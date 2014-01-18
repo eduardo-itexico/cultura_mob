@@ -10,9 +10,9 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
-if(OS_ANDROID){
-    Alloy.Globals.Map = require('ti.map');
-}
+
+Alloy.Globals.Map = require('ti.map');
+
 
 Alloy.Globals.DEVICE_WIDTH_num		= Ti.Platform.displayCaps.platformWidth;
 Alloy.Globals.DEVICE_WIDTH			= Ti.Platform.displayCaps.platformWidth+((OS_ANDROID)?"px":"dp");

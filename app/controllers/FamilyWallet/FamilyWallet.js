@@ -8,61 +8,65 @@ var user_token	=  Ti.App.Properties.getString("user_token",false);
 var action 		= DB.INSERT;
 var actual_page = 1;
 var total_paginado = 10;
+var descargando	   = false;
 DB.init(function(){});
-loadUsers();
+var dataInmuebles = args && args.params && args.params.data ? args.params.data : null;
+Ti.API.info('ARGS------'+JSON.stringify(dataInmuebles));
 
+if(dataInmuebles && dataInmuebles.length > 0){
+		showRows(dataInmuebles);
+}
 // ADDITIONS 
 
 // FUNCTIONS
+	
+function loadInmuebles(pagina){
+	
+	
+}
 function loadUsers(){
-	 var dataTemp = {
-            url     : L("url_inmuebles_paginados") + actual_page + "/" + total_paginado,
-            type    : 'GET',
-            format  : 'JSON',
-            data    : {
-            }
-        };
-	APP.http.request(dataTemp,function(_result){
-            //Ti.API.info("-->"+JSON.stringify(_result));
-            
-            if(_result._result == 1){
-            	var longitud = _result._data.length ? _result._data.length : 0;
-            	var data	 = _result._data ? _result._data : 0;
-            	
-                if(longitud > 0){
-                    for(var i=0; i < longitud; i++ ){
-                    	var element = data[i];
-						var row = Alloy.createController('FamilyWallet/RowFamily',{element:element}).getView();
-						$.scrollFamily.add(row);
-					}
-                    APP.hideActivityindicator();
-                }else{
-                    //alert(_result._data.message);
-                    APP.hideActivityindicator();
-                    alert("No messages were found.");
-                }
-            }else{
-                APP.hideActivityindicator();
-                alert("Internet connection error, please try again.");
-            }
-            
-        });
-    /*    
-	var members = DB.getMembers(user_token,function(){});
-	Utils.removeChildren($.scrollFamily);
-	if(members && members.length > 0){
-		$.scrollFamily.add(Ti.UI.createView({height:44+APP.fixSizeIos7()}));
-		for(var i=0; i < members.length; i++ ){
-			var row = Alloy.createController('FamilyWallet/RowFamily',{member:members[i]}).getView();
-			$.scrollFamily.add(row);
-		}
-		$.scrollFamily.add(Alloy.createController('FamilyWallet/Caption').getView());
-	}else{
-		//FIX TO
-		var row = Alloy.createController('FamilyWallet/EmptyMembers').getView();
-		$.scrollFamily.add(row);
+	
+		APP.showActivityindicator();
+		descargando = true;
+		 var dataTemp = {
+	            url     : L("url_inmuebles_paginados") + actual_page + "/" + total_paginado,
+	            type    : 'GET',
+	            format  : 'JSON',
+	            data    : {
+	            }
+	        };
+		APP.http.request(dataTemp,function(_result){
+	            //Ti.API.info("-->"+JSON.stringify(_result));
+	            
+	            if(_result._result == 1){
+	            	var longitud = _result._data.length ? _result._data.length : 0;
+	            	var data	 = _result._data ? _result._data : 0;
+	            	Ti.API.info('LONGITUD-----'+longitud);
+	                if(longitud > 0){
+	                    showRows(data);
+						descargando = false;
+	                    APP.hideActivityindicator();
+	                }else{
+	                    //alert(_result._data.message);
+	                    APP.hideActivityindicator();
+	                    alert("No messages were found.");
+	                }
+	            }else{
+	                APP.hideActivityindicator();
+	                alert("Internet connection error, please try again.");
+	            }
+	        });
+	
+	
+  
+}
+
+function showRows(data){
+	for(var i=0; i < data.length; i++ ){
+    	var element = data[i];
+		var row = Alloy.createController('FamilyWallet/RowFamily',{element:element}).getView();
+		$.wrapper.add(row);
 	}
-	*/
 }
 
 function initializeView(){
@@ -75,13 +79,16 @@ function updateView(){
     APP.headerbar.setLeftButton(0,false);
     APP.headerbar.setRightButton(0,false);
     APP.headerbar.setLeftButton(APP.OPENMENU,true);
-    APP.headerbar.setTitle("My Family Wallet");
+    APP.headerbar.setTitle("Inmuebles");
     user_token	=  Ti.App.Properties.getString("user_token",false);
     loadUsers();
 }
 
 function showProfile(e){
 	//Ti.API.info('Console-------->'+JSON.stringify(e.source));
+	APP.openWindow({controller:"FamilyWallet/ProfileFamily",
+					controllerParams:e.source.elemento});
+/*
 	var id = "";
 	var member = null;
 	if(e.source && e.source.id_profile){
@@ -132,6 +139,7 @@ function showProfile(e){
 	}else{
 		
 	}
+	*/
 }
 
 function openDetailView(controller,params){
@@ -441,10 +449,24 @@ function saveMember(insertObject,callback){
 
 // LSITENERS
 
+
+
+$.scrollFamily.addEventListener('scroll', function (e) {
+	
+	Ti.API.info('RECT:'+  ($.wrapper.rect.height - e.y));
+	Ti.API.info('SIZEHE:'+ $.scrollFamily.getRect().height);
+	//Ti.API.info('SIZEHE:'+ e.contentSize.height);
+	var tolerancia = 100;
+	if(( ($.wrapper.rect.height - e.y) <= ($.scrollFamily.getRect().height + tolerancia)) && !descargando ){
+		actual_page += 1;
+		loadUsers();
+	}
+	
+});
 // EXPORTS
 exports.loadUsers 		 = loadUsers;
 exports.showAndLoadImage = showAndLoadImage;
 exports.saveMember 		 = saveMember;
 exports.clickActions 	 = clickActions;
 exports.updateView 		 = updateView;
-exports.initializeView   = initializeView
+exports.initializeView   = initializeView;
