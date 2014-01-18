@@ -4,10 +4,12 @@ var actual_category = null;
 var actual_inmueble = null;
 var actual_precio_desde = null;
 var actual_precio_hasta = null;
+var actual_movimiento = null;
 var self = this;
 var actual_image = null;
 var actual_coords = null;
 var actual_heading = null;
+
 var array_precios_renta = [1500,2000,2500,3000,3500,4000,4500,5000,6000,8000,10000,15000,20000,30000,40000,50000,100000];
 var array_precios_venta = [100000,150000,200000,250000,300000,350000,400000,450000,500000,750000,1000000,2000000,3000000,
 							4000000,5000000,7000000,10000000,20000000,30000000,40000000,50000000,100000000];
@@ -98,11 +100,20 @@ function clickFields(e){
 		case "buscar":
 			
 			var dataTemp = {
-            url     : L("find_inmuebles_mobile") +($.movimiento.value? $.movimiento.value : "-") + "/" + 
+            url     : L("find_inmuebles_mobile") +(actual_movimiento? actual_movimiento : "-") + "/" + 
             									  ($.inmueble.value ? $.inmueble.value : "-")  + "/"+ 
             									  ($.campoClave.value ? $.campoClave.value:"-")  +"/" + 
             									  (actual_precio_desde? actual_precio_desde.precio : "0") + "/"+
-            									  (actual_precio_hasta? actual_precio_hasta.precio : "0"),
+            									  (actual_precio_hasta? actual_precio_hasta.precio : "0")+"/"+
+            									  ($.plantas.value? $.plantas.value : "0")+"/"+
+            									  ($.recamaras.value? $.recamaras.value : "0")+"/"+
+            									  ($.banos.value? $.banos.value : "0")+"/"+
+            									  ($.mediosBanos.value? $.mediosBanos.value : "0")+"/"+
+            									  ($.cochera.value? $.cochera.value : "0")+"/"+
+            									  ($.superficieDesde.value? $.superficieDesde.value : "0")+"/"+
+            									  ($.superficieHasta.value? $.superficieHasta.value : "0")+"/"+
+            									  ($.m2Desde.value? $.m2Desde.value : "0")+"/"+
+            									  ($.m2Hasta.value? $.m2Hasta.value : "0"),
             type    : 'GET',
             format  : 'JSON'
         };
@@ -149,24 +160,22 @@ function actualCategory(category){
 		break;
 		case "movimiento":
 			actual_category = category;
-			var temp_value = "";
 			switch(actual_category.value){
 				case "Comprar":
-					temp_value = "Venta";
+					actual_movimiento = "Venta";
 					
 				break;
 				case "Rentar":
-					temp_value = "Renta";
+					actual_movimiento = "Renta";
 				break;
 				case "Comprar/Rentar":
-					temp_value = "Venta/Renta";
+					actual_movimiento = "Venta/Renta";
 				break;
 				case "Traspasar":
-					temp_value  = "Traspaso";
+					actual_movimiento  = "Traspaso";
 				break;
-
 			}
-			$.movimiento.value = temp_value ;	
+			$.movimiento.value = actual_movimiento ;	
 		break;
 		case "precio_desde":
 			actual_precio_desde = category;
