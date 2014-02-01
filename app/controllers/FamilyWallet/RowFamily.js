@@ -49,15 +49,11 @@ function getPrecio(elemento){
 }
 
 
-switch(elemento.inmueble){
-	case "Departamento":
-		elemento.inmueble = "Depto.";
-	break;
-}
 
 
 $.kinshipProfile.text	=  "$ " + getPrecio(elemento);
 $.movimiento.text		= elemento.movimiento;
-$.nameProfile.text 		= elemento.inmueble + " " + capitalize(colonia.nombre);
+$.nameProfile.text 		= capitalize(colonia.nombre);
+$.tipo.text 			= capitalize(elemento.inmueble); 
 var imagen_principal 	= L('path_base_img_inmuebles_main') + elemento.imagen_principal;
 $.imageProfile.image		= imagen_principal;

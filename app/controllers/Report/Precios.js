@@ -5,7 +5,7 @@ var actual  = params.actualCategory ? params.actualCategory : "";
 var precios = params.precios;
 var option	= params.option; 
 
-Ti.API.info('ACTUAL-------------->'+JSON.stringify(actual));
+Ti.API.info('PRECIOS-------------->'+JSON.stringify(precios));
 populateTable(precios);
 markSelected(actual);
 

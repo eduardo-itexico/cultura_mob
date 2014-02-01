@@ -19,7 +19,7 @@ function poslayoutFnc(){
     APP.DEVICE_WIDTH    = $.win.size.width;
     APP.DEVICE_HEIGHT   = $.win.size.height;
     //TODO: Here we change the first option opened
-    APP.handleNavigation("Report/Report");
+    APP.handleNavigation("FamilyWallet/FamilyWallet");
     $.win.removeEventListener("postlayout",poslayoutFnc);
 }
 // CODE

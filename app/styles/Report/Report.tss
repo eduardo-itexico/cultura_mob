@@ -27,15 +27,16 @@
 	backgroundSelectedImage: "/images/ic_picture_report_pressed.png",
 	width:36,
 	height:36,
-	left:"5%"
+	left:"5%",
+	top:0
 }
 ".btnAdd":{
 	backgroundImage:"/images/bt_add.png",
 	backgroundSelectedImage: "/images/bt_add.png",
 	width:38,
 	height:38,
-	left:"5%",
-	top:10
+	right:70,
+	top:5
 }
 
 ".btnMinus":{
@@ -43,8 +44,8 @@
 	backgroundSelectedImage: "/images/bt_minus.png",
 	width:38,
 	height:38,
-	left:"5%",
-	top:10
+	right:20,
+	top:5
 }
 
 "#configButton":{
@@ -170,15 +171,13 @@
 }
 
 ".inputProfile":{
-	width:'100%',
-	paddingLeft:10,
-	top:10
-	
+	width:170,
+	right:20,
 }
 
 ".inputHalfProfile":{
-	width:'30%',
-	paddingLeft:10,
+	width:50,
+	left:135,
 	top:10,
 	textAlign:Ti.UI.TEXT_ALIGNMENT_CENTER
 	
@@ -201,4 +200,28 @@
 ".containerBotonera":{
 	height:Ti.UI.SIZE,
 	top:30,
+}
+
+
+".normalBold":{
+	font:{
+		fontSize:14,
+		fontWeight:'bold',
+		color:'black'
+	},
+	left:40	
+}
+".normalFont":{
+	font:{
+		fontSize:14,
+		color:'black'
+	},
+	right:40	
+}
+
+".titleHeader":{
+	font:{
+		fontSize:18,
+		fontWeight:'bold'
+	}
 }

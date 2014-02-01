@@ -510,6 +510,7 @@ var APP = {
             
         }
         APP.menubar.getView().isOpen = !APP.menubar.getView().isOpen;
+        /*
        	if( Ti.App.Properties.getString( 'user_token' , false ) ){
        		APP.sessionButton.label.text = L( 'logout' );
        		APP.sessionButton.icon.image = '/images/ic_logout.png';
@@ -518,6 +519,7 @@ var APP = {
        		APP.sessionButton.label.text = L( 'login' );
        		APP.sessionButton.icon.image = '/images/ic_login.png';
        	}
+       	*/
        	return true;
     },
 

@@ -12,8 +12,8 @@ function loadImages(){
 		var imagenes = new Array();
 		for(var i=0; i < longitud;i++){
 			var elemento = params[i];
-			var url = L('path_base_img_inmuebles_galeria') +elemento.nombre;
-			Ti.API.info('URK--'+url);
+			var url = L('path_base_img_inmuebles_galeria') + elemento.nombre;
+			//Ti.API.info('URK--'+url);
 			var imageTemp = Ti.UI.createImageView({
 				image: url
 			});
@@ -21,7 +21,7 @@ function loadImages(){
     				maxZoomScale:4.0,
 			});
 			scrollWrapper.add(imageTemp);
-			Ti.API.info('AGREGO');
+			//Ti.API.info('AGREGO');
 			imagenes.push(scrollWrapper);
 			
 		}

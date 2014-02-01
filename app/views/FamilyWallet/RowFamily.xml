@@ -1,10 +1,12 @@
 <Alloy>
 	<View class="containerFamily" id_profile="" id="viewProfile">
-		<ImageView class="imageFamily"  id="imageProfile" touchEnabled="false"></ImageView>
+		
 		<Label class="titleFamily" id="nameProfile" touchEnabled="false"></Label>
+		<Label class="inmuebleTipo" id="tipo" touchEnabled="false"></Label>
 		<Label class="subTitleFamily" id="kinshipProfile" touchEnabled="false"></Label>
 		<Label class="movimientoFamily" id="movimiento" touchEnabled="false"></Label>
 		<ImageView class="bracket" touchEnabled="false"></ImageView>
+		<ImageView class="imageFamily"  id="imageProfile" touchEnabled="false"></ImageView>
 		<View class="separator" touchEnabled="false" />
 	</View>
 </Alloy>

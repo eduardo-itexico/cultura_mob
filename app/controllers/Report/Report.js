@@ -10,10 +10,21 @@ var actual_image = null;
 var actual_coords = null;
 var actual_heading = null;
 
-var array_precios_renta = [1500,2000,2500,3000,3500,4000,4500,5000,6000,8000,10000,15000,20000,30000,40000,50000,100000];
-var array_precios_venta = [100000,150000,200000,250000,300000,350000,400000,450000,500000,750000,1000000,2000000,3000000,
+var array_precios_renta = [0,1500,2000,2500,3000,3500,4000,4500,5000,6000,8000,10000,15000,20000,30000,40000,50000,100000];
+var array_precios_venta = [0,100000,150000,200000,250000,300000,350000,400000,450000,500000,750000,1000000,2000000,3000000,
 							4000000,5000000,7000000,10000000,20000000,30000000,40000000,50000000,100000000];
-
+function validateFiltros(){
+	
+	if($.inmueble.value == "" || $.movimiento.value == ""){
+		alert("Por favor selecciona un movimiento y un tipo de inmueble");
+		return false;
+	}
+	if(($.precio_desde.value == "" && $.precio_hasta.value != "") || ($.precio_desde.value != "" && $.precio_hasta.value == "")  ){
+		alert("Por favor selecciona desde y hasta que precio deseas tu inmueble");
+		return false;
+	}
+	return true;
+}
 
 function clickFields(e){
 	switch(e.source.id){
@@ -49,17 +60,21 @@ function clickFields(e){
 			}else{
 				array = [];
 			}
-			APP.popUp({controller:"Report/Precios",
-					   controllerParams:{controller:self,
-					   	actualCategory:actual_precio_desde,
-					   	precios: array,
-					   	option:"precio_desde"},
-					   	title		: 'Desde que precio?',
-						container : {
-							width	: 300,
-							height	: 450
-						}
-						});
+			if(array.length > 0){
+				APP.popUp({controller:"Report/Precios",
+						   controllerParams:{controller:self,
+						   	actualCategory:actual_precio_desde,
+						   	precios: array,
+						   	option:"precio_desde"},
+						   	title		: 'Desde que precio?',
+							container : {
+								width	: 300,
+								height	: 450
+							}
+							});
+			}else{
+				alert('Por favor selecciona un movimiento...');
+			}
 			break; 
 		case "precio_hasta":
 			var array = [];
@@ -98,52 +113,54 @@ function clickFields(e){
 			break;
 			
 		case "buscar":
-			
-			var dataTemp = {
-            url     : L("find_inmuebles_mobile") +(actual_movimiento? actual_movimiento : "-") + "/" + 
-            									  ($.inmueble.value ? $.inmueble.value : "-")  + "/"+ 
-            									  ($.campoClave.value ? $.campoClave.value:"-")  +"/" + 
-            									  (actual_precio_desde? actual_precio_desde.precio : "0") + "/"+
-            									  (actual_precio_hasta? actual_precio_hasta.precio : "0")+"/"+
-            									  ($.plantas.value? $.plantas.value : "0")+"/"+
-            									  ($.recamaras.value? $.recamaras.value : "0")+"/"+
-            									  ($.banos.value? $.banos.value : "0")+"/"+
-            									  ($.mediosBanos.value? $.mediosBanos.value : "0")+"/"+
-            									  ($.cochera.value? $.cochera.value : "0")+"/"+
-            									  ($.superficieDesde.value? $.superficieDesde.value : "0")+"/"+
-            									  ($.superficieHasta.value? $.superficieHasta.value : "0")+"/"+
-            									  ($.precioM2Desde.value? $.precioM2Desde.value : "0")+"/"+
-            									  ($.precioM2Hasta.value? $.precioM2Hasta.value : "0"),
-            type    : 'GET',
-            format  : 'JSON'
-        };
-        Ti.API.info('URL------>'+dataTemp.url);
-        APP.showActivityindicator();
-		APP.http.request(dataTemp,function(_result){
-	            Ti.API.info("RESULT------->"+JSON.stringify(_result));
-	            if(_result._result == 1){
-	            	var longitud = _result._data.length ? _result._data.length : 0;
-	            	var data	 = _result._data ? _result._data : 0;
-	            	//Ti.API.info('RESULTADO-----'+JSON.stringify(_result));
-	                if(longitud > 0){
-	                    APP.hideActivityindicator();
-	                    APP.openWindow({
-							controller : 'FamilyWallet/FamilyWallet',
-							controllerParams : {
-								data:data
-							}
-						});
-	                }else{
-	                    //alert(_result._data.message);
-	                    APP.hideActivityindicator();
-	                    alert("No messages were found.");
-	                }
-	                APP.hideActivityindicator();
-	            }else{
-	                APP.hideActivityindicator();
-	                alert("Internet connection error, please try again.");
-	            }
-	        });
+			if(validateFiltros()){
+				var dataTemp = {
+	            url     : L("find_inmuebles_mobile") +(actual_movimiento? actual_movimiento : "-") + "/" + 
+	            									  ($.inmueble.value ? $.inmueble.value : "-")  + "/"+ 
+	            									  ($.campoClave.value ? $.campoClave.value:"-")  +"/" + 
+	            									  (actual_precio_desde? actual_precio_desde.precio : "0") + "/"+
+	            									  (actual_precio_hasta? actual_precio_hasta.precio : "0")+"/"+
+	            									  ($.plantas.value? $.plantas.value : "0")+"/"+
+	            									  ($.recamaras.value? $.recamaras.value : "0")+"/"+
+	            									  ($.banos.value? $.banos.value : "0")+"/"+
+	            									  ($.mediosBanos.value? $.mediosBanos.value : "0")+"/"+
+	            									  ($.cochera.value? $.cochera.value : "0")+"/"+
+	            									  ($.superficieDesde.value? $.superficieDesde.value : "0")+"/"+
+	            									  ($.superficieHasta.value? $.superficieHasta.value : "0")+"/"+
+	            									  ($.precioM2Desde.value? $.precioM2Desde.value : "0")+"/"+
+	            									  ($.precioM2Hasta.value? $.precioM2Hasta.value : "0"),
+	            type    : 'GET',
+	            format  : 'JSON'
+	        };
+	        Ti.API.info('URL------>'+dataTemp.url);
+	        APP.showActivityindicator();
+			APP.http.request(dataTemp,function(_result){
+		            Ti.API.info("RESULT------->"+JSON.stringify(_result));
+		            if(_result._result == 1){
+		            	var longitud = _result._data.length ? _result._data.length : 0;
+		            	var data	 = _result._data ? _result._data : 0;
+		            	//Ti.API.info('RESULTADO-----'+JSON.stringify(_result));
+		                if(longitud > 0){
+		                    APP.hideActivityindicator();
+		                    APP.openWindow({
+								controller : 'FamilyWallet/FamilyWallet',
+								controllerParams : {
+									data:data,
+									from:"busqueda"
+								}
+							});
+		                }else{
+		                    //alert(_result._data.message);
+		                    APP.hideActivityindicator();
+		                    alert("No messages were found.");
+		                }
+		                APP.hideActivityindicator();
+		            }else{
+		                APP.hideActivityindicator();
+		                alert("Internet connection error, please try again.");
+		            }
+		        });
+	        }
 		break;
 	}
 }
@@ -223,7 +240,19 @@ function updateView(){
     APP.headerbar.setLeftButton(APP.OPENMENU,true);
     APP.headerbar.setTitle("Busqueda");
     
+    var buscar = Ti.UI.createButton({title:"Buscar",
+    								right:20,
+    								color:"white",
+    								id:"buscar"
+    								});
+   
+   	buscar.addEventListener('click',clickFields);
+    
+    APP.headerbar.addCustomView(buscar);
+    
 }
+
+
 
 
 exports.updateView 		= updateView;

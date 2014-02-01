@@ -1,5 +1,5 @@
 ".win": {
-	backgroundColor: "white",
+	backgroundColor: "#F9F9F9",
 	top:0,
 	barColor:'white',
 	navBarHidden:true,
@@ -25,7 +25,7 @@
 	left:0,
 	width:'100%',//Alloy.Globals.DEVICE_WIDTH,
 	bottom:0,
-	backgroundColor:"white",
+	backgroundColor:"#F9F9F9",
 	layout:"absolute",
 	zIndex:100
 },
@@ -34,7 +34,7 @@
 	left:0,
 	right:0,
 	height:44,
-	backgroundColor:"transparent"
+	backgroundColor:"#F9F9F9"
 },
 ".viewContainer":{
 	top:0,

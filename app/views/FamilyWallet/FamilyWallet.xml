@@ -1,6 +1,7 @@
 <Alloy>
-	<View>
+	<View id="mainView">
 		<ScrollView class="container" id="scrollFamily" onClick="showProfile">
+			<View class="blank"/>
 			<View id="wrapper"></View>
 		</ScrollView>
 		

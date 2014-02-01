@@ -1,74 +1,87 @@
 <Alloy>
 	<ScrollView class="container">
 		<View class="blank"/>
-		<View id="borderedSquare" layout="vertical">
-        	<TextField id="movimiento" hintText="Selecciona el movimiento" class="inputProfile" onClick="clickFields" enabled="false"></TextField>
-        	<TextField id="inmueble" hintText="Selecciona el inmueble" class="inputProfile" onClick="clickFields" enabled="false"></TextField>
-        	<TextField id="precio_desde" hintText="Precio desde" class="inputProfile" onClick="clickFields" enabled="false"></TextField>
-        	<TextField id="precio_hasta" hintText="Precio hasta" class="inputProfile" onClick="clickFields" enabled="false"></TextField>
-        	<TextField id="campoClave" hintText="Palabra clave" class="inputProfile"></TextField>
-        	<View class="layoutVertical" id="viewAvanzada" >
-        			<View class="layoutHorizontal">
-		        		<Label class="lblFields">PLANTAS</Label>
-		        		<TextField id="plantas"  class="inputHalfProfile" value="0"></TextField>
-		        		<Button class="btnAdd" onClick="clickSpinner" direction="increase">-</Button>
-		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
-		        	</View>
-        			<View class="layoutHorizontal">
-		        		<Label class="lblFields">RECAMARAS</Label>
-		        		<TextField id="recamaras"  class="inputHalfProfile" value="0"></TextField>
-		        		<Button class="btnAdd" onClick="clickSpinner" direction="increase">-</Button>
-		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
-		        	</View>
-		        	<View class="layoutHorizontal">
-		        		<Label class="lblFields">BAÑOS</Label>
-		        		<TextField id="banos"  class="inputHalfProfile" value="0"></TextField>
-		        		<Button class="btnAdd" onClick="clickSpinner" direction="increase">-</Button>
-		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
-		        	</View>
-		        	<View class="layoutHorizontal">
-		        		<Label class="lblFields">MEDIOS BAÑOS</Label>
-		        		<TextField id="mediosBanos"  class="inputHalfProfile" value="0"></TextField>
-		        		<Button class="btnAdd" onClick="clickSpinner" direction="increase">-</Button>
-		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
-		        	</View>
-		        	<View class="layoutHorizontal">
-		        		<Label class="lblFields">COCHERA</Label>
-		        		<TextField id="cochera"  class="inputHalfProfile" value="0"></TextField>
-		        		<Button class="btnAdd" onClick="clickSpinner" direction="increase">-</Button>
-		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
-		        	</View>
-		        	
-		        	<View class="layoutHorizontal">
-		        		<Label class="lblFields">SUP M2 DESDE"</Label>
-		        		<TextField id="superficieDesde"  class="inputHalfProfile" value="0" step="100"></TextField>
-		        		<Button class="btnAdd" onClick="clickSpinner"  direction="increase">-</Button>
-		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
-		        	</View>
-		        	<View class="layoutHorizontal">
-		        		<Label class="lblFields">SUP M2 HASTA</Label>
-		        		<TextField id="superficieHasta"  class="inputHalfProfile" value="0" step="100"></TextField>
-		        		<Button class="btnAdd" onClick="clickSpinner"  direction="increase">-</Button>
-		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
-		        	</View>
-		        	<View class="layoutHorizontal">
-		        		<Label class="lblFields">$ M2 DESDE</Label>
-		        		<TextField id="precioM2Desde"  class="inputHalfProfile" value="0" step="1000"></TextField>
-		        		<Button class="btnAdd" onClick="clickSpinner"  direction="increase">-</Button>
-		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
-		        	</View>
-		        	<View class="layoutHorizontal">
-		        		<Label class="lblFields">$ M2 HASTA</Label>
-		        		<TextField id="precioM2Hasta"  class="inputHalfProfile" value="0" step="1000"></TextField>
-		        		<Button class="btnAdd" onClick="clickSpinner"  direction="increase">-</Button>
-		        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease">+</Button>
-		        	</View>
-			</View>
-			<View class="containerBotonera">
-					<Button id="avanzada" onClick="clickFields" title="Avanzada" class="btnAction" left="10"></Button>
-					<Button id="buscar" onClick="clickFields" title="Buscar" class="btnAction" right="10"></Button>	
-			</View>
-		</View>
+		<TableView id="contentInmueble">
+			<TableViewSection headerTitle="Búsqueda" class="titleHeader">
+				<TableViewRow>
+					<Label class="normalBold">Movimiento:</Label>
+					<TextField id="movimiento"  class="inputProfile" onClick="clickFields" enabled="false"></TextField>		
+				</TableViewRow>	
+				<TableViewRow>
+					<Label class="normalBold">Tipo:</Label>
+					<TextField id="inmueble" class="inputProfile" onClick="clickFields" enabled="false"></TextField>		
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="normalBold">Precio desde:</Label>
+					<TextField id="precio_desde" class="inputProfile" onClick="clickFields" enabled="false"></TextField>		
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="normalBold">Precio hasta:</Label>
+					<TextField id="precio_hasta" class="inputProfile" onClick="clickFields" enabled="false"></TextField>		
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="normalBold">Colonia:</Label>
+					<TextField id="campoClave"  class="inputProfile"></TextField>		
+				</TableViewRow>
+			</TableViewSection>
+			<TableViewSection headerTitle="Avanzada" class="titleHeader">
+				<TableViewRow>
+					<Label class="normalBold">Plantas:</Label>
+					<TextField id="plantas"  class="inputHalfProfile" value="0"></TextField>
+	        		<Button class="btnAdd" onClick="clickSpinner" direction="increase"></Button>
+	        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease"></Button>		
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="normalBold">Recámaras:</Label>
+					<TextField id="recamaras"  class="inputHalfProfile" value="0"></TextField>
+	        		<Button class="btnAdd" onClick="clickSpinner" direction="increase"></Button>
+	        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease"></Button>		
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="normalBold">Baños:</Label>
+					<TextField id="banos"  class="inputHalfProfile" value="0"></TextField>
+	        		<Button class="btnAdd" onClick="clickSpinner" direction="increase"></Button>
+	        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease"></Button>		
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="normalBold">Medios Baños:</Label>
+					<TextField id="mediosBanos"  class="inputHalfProfile" value="0"></TextField>
+	        		<Button class="btnAdd" onClick="clickSpinner" direction="increase"></Button>
+	        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease"></Button>		
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="normalBold">Cochera:</Label>
+					<TextField id="cochera"  class="inputHalfProfile" value="0"></TextField>
+	        		<Button class="btnAdd" onClick="clickSpinner" direction="increase"></Button>
+	        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease"></Button>		
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="normalBold">Sup. m2 desde:</Label>
+					<TextField id="superficieDesde"  class="inputHalfProfile" value="0" step="100"></TextField>
+	        		<Button class="btnAdd" onClick="clickSpinner" direction="increase"></Button>
+	        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease"></Button>		
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="normalBold">Sup. m2 hasta:</Label>
+					<TextField id="superficieHasta"  class="inputHalfProfile" value="0" step="100"></TextField>
+	        		<Button class="btnAdd" onClick="clickSpinner" direction="increase"></Button>
+	        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease"></Button>		
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="normalBold">$ m2 desde:</Label>
+					<TextField id="precioM2Desde"  class="inputHalfProfile" value="0" step="1000"></TextField>
+	        		<Button class="btnAdd" onClick="clickSpinner" direction="increase"></Button>
+	        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease"></Button>		
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="normalBold">$ m2 hasta:</Label>
+					<TextField id="precioM2Hasta"  class="inputHalfProfile" value="0" step="1000"></TextField>
+	        		<Button class="btnAdd" onClick="clickSpinner" direction="increase"></Button>
+	        		<Button class="btnMinus"onClick="clickSpinner" direction="decrease"></Button>		
+				</TableViewRow>
+			</TableViewSection>
+		</TableView>
+		
 		
 	</ScrollView>
 </Alloy>

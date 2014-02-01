@@ -1,50 +1,57 @@
 ".containerFamily": {
-	backgroundColor: "white",
-	height: 84,
-	width: '100%'
+	backgroundColor: "#123761",
+	height: 110,
+	width: Ti.UI.FILL
 	
 }
 
 ".imageFamily":{
-	width:70,
-	height:70,
-	image:"/images/im_mask_medium.png",
-	backgroundColor:'gray',
-	left:10,
-	top:9
+	width:90,
+	height:90,
+	right:10,
+	top:10,
+	borderRadius: 10,
+	borderWidth: 2,
+	borderColor: 'white'
+	
 }
 
 ".titleFamily":{
 	font:{
-		fontSize:18
+		fontSize:14
+		
 	},
-	color: "#000000",
-	left:95,
-	height:40,
-	top:20,
-	right:40
+	color: "white",
+	left:10,
+	top:40
 }
 
+".inmuebleTipo":{
+	font:{
+		fontSize:16,
+		fontWeight:'bold'
+	},
+	color: "white",
+	left:10,
+	top:20
+}
 ".subTitleFamily":{
 	font:{
-		fontSize:15
+		fontSize:18,
+		fontWeight:'bold'
 	},
-	color: "#CCCCCC",
-	left:95,
-	top:50,
-	height:20,
-	right:40
+	color: "#f77b32",
+	left:10,
+	top:60
 }
 
 ".movimientoFamily":{
 	font:{
-		fontSize:15
+		fontSize:14
 	},
-	color: "#CCCCCC",
-	right:10,
-	top:10,
-	height:20,
-	right:40
+	color: "#ffef36",
+	right:120,
+	bottom:10
 }
 
 ".bracket":{

@@ -75,7 +75,7 @@
 	color: "#17B8E4"
 },
 ".separator":{
-	backgroundColor: "#CCC",
+	backgroundColor: '#f77b32',
 	width: Ti.UI.FILL,
 	height: 1,
 	top: 0

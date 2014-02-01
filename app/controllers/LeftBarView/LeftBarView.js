@@ -64,7 +64,7 @@ function highligthSelection(self){
 
 function highlightNotifications(){
 	tempOption.backgroundImage = "/images/transparent.png";
-	tempOption                 = $.notifications;
+	//tempOption                 = $.notifications;
 	tempOption.backgroundImage = "/images/bg_dashboard_selector.png";
 	return true;
 }
@@ -72,10 +72,12 @@ function highlightNotifications(){
 /** CODE **/
 $.backgroundIosBar.height 	= APP.fixSizeIos7();
 $.menuContainer.top			= APP.fixSizeIos7();
+/*
 APP.sessionButton = {
 	label 	: $.session_label,
 	icon 	: $.session_icon
-}; 
+};
+*/ 
 APP.notifications.badge = $.notification_number;
 
 tempOption                  = $.familyWallet;

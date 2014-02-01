@@ -1,58 +1,90 @@
 <Alloy>
 	<ScrollView class="containerProfile" id="mainContainerProfile">
-			<View class="blank"></View>
+			<View class="blank"/>
+			<ImageView id="imagenPrincipal" onClick="showGaleria"></ImageView>
 			<View id="mainImage">
-				<ImageView id="imagenPrincipal" onClick="showGaleria"></ImageView>
-				<View class="containerMainData">
-					<Label id="tipo" class="yellowTitle" left="5"  ></Label>
-					<Label id="movimiento" class="yellowTitle" left="5" ></Label>
-					<Label id="colonia" class="whiteTitle" left="5" ></Label>
-					<Label id="precio" class="price" left="5"></Label>
-				</View>
+				<ImageView id="firstFromGaleria" onClick="showGaleria"></ImageView>
+				<Label id="tipo" class="yellowTitle"   ></Label>
+				<Label id="colonia" class="whiteTitle"  ></Label>
+				<Label id="precio" class="price" ></Label>
+				<Label id="movimiento" class="whiteTitle"  ></Label>
 			</View>
+			<Label class="whiteLegend"   >*Click en la imagen para ver galeria</Label>
+			<TableView id="contentInmueble">
+				<TableViewSection headerTitle="Descripcion" id="sectionDescription">
+					<TableViewRow>
+						<Label id="contentDescripcion" class="normalFont"></Label>
+					</TableViewRow>	
+				</TableViewSection>
+				<TableViewSection headerTitle="Características">
+					<TableViewRow>
+						<Label class="normalBold">Plantas:</Label><Label id="plantas" class="normalFont" ></Label>
+					</TableViewRow>	
+					<TableViewRow>
+						<Label class="normalBold">recámaras:</Label><Label id="recamaras" class="normalFont" ></Label>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Baños:</Label><Label id="banos" class="normalFont" ></Label>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Medios baños:</Label><Label id="medios_banos" class="normalFont" ></Label>
+					</TableViewRow>	
+					<TableViewRow>
+						<Label class="normalBold">Cochera:</Label><Label id="cochera" class="normalFont" ></Label>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Cochera:</Label><Label id="cochera" class="normalFont" ></Label>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Superficie M2:</Label><Label id="superficie_terreno" class="normalFont" ></Label>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Superficie M2:</Label><Label id="superficie_terreno" class="normalFont" ></Label>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Superficie cosntruida M2:</Label><Label id="superficie_construida" class="normalFont" ></Label>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Jardin</Label><Label id="jardin" class="normalFont" ></Label>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Jardin</Label><Label id="alberca" class="normalFont" ></Label>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Jardin</Label><Label id="cuarto_servicio" class="normalFont" ></Label>
+					</TableViewRow>
+				</TableViewSection>
+				<TableViewSection headerTitle="Asesor">
+					<TableViewRow>
+						<Label class="normalBold">Nombre:</Label><Label id="nombre_asesor" class="normalFont" ></Label>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Correo:</Label><Button id="solicitarInformacion" title="Solicitar Informes" onClick="sendEmail"></Button>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Celular:</Label><Label id="celular" class="normalFont" ></Label>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Oficina:</Label><Label id="telefono" class="normalFont" ></Label>
+					</TableViewRow>
+					<TableViewRow>
+						<Label class="normalBold">Otro:</Label><Label id="telefono_oficina" class="normalFont" ></Label>
+					</TableViewRow>
+
+				</TableViewSection>
+				<TableViewSection headerTitle="Mapa">
+					<TableViewRow>
+						<View id="mapview" ns="Alloy.Globals.Map" />
+					</TableViewRow>
+				</TableViewSection>
+			</TableView>
+			<!--
 			<View class="layoutVertical" id="dataContainer">
-				<Label id="descripcion" class="redTitle">Descripción</Label>
-				<Label id="contentDescripcion" class="normalFont"></Label>
-				<Label id="descripcion" class="redTitle">Características</Label>
-				<View class="layoutHorizontal" >
-					<View class="halfVertical">
-						<View class="layoutHorizontal">
-							<Label class="whiteBold">Plantas:</Label><Label id="plantas" class="whiteNormal"></Label>	
-						</View>
-						<View class="layoutHorizontal">
-							<Label class="whiteBold">Recámaras:</Label><Label id="recamaras" class="whiteNormal"></Label>	
-						</View>
-						<View class="layoutHorizontal">
-							<Label class="whiteBold">Baños:</Label><Label id="banos" class="whiteNormal"></Label>	
-						</View>
-						<View class="layoutHorizontal">
-							<Label class="whiteBold">Medios baños:</Label><Label id="medios_banos" class="whiteNormal"></Label>	
-						</View>
-						<View class="layoutHorizontal">
-							<Label class="whiteBold">Cochera:</Label><Label id="cochera" class="whiteNormal"></Label>	
-						</View>
-					</View>
-					<View class="halfVertical">
-						<View class="layoutHorizontal">
-							<Label class="whiteBold">M2:</Label><Label id="superficie_terreno" class="whiteNormal"></Label>	
-						</View>
-						<View class="layoutHorizontal">
-							<Label class="whiteBold">M2 Const.:</Label><Label id="superficie_construida" class="whiteNormal"></Label>	
-						</View>
-						<View class="layoutHorizontal">
-							<Label class="whiteBold">Jardin:</Label><Label id="jardin" class="whiteNormal"></Label>	
-						</View>
-						<View class="layoutHorizontal">
-							<Label class="whiteBold">Alberca:</Label><Label id="alberca" class="whiteNormal"></Label>	
-						</View>
-						<View class="layoutHorizontal">
-							<Label class="whiteBold">Cuarto de Servicio:</Label><Label id="cuarto_servicio" class="whiteNormal"></Label>	
-						</View>
-					</View>
-				</View>
-				<Label class="redTitle">Asesor</Label>
+				
+				
+				
 				<View class="asesorContainer">
-					<ImageView id="imagenAsesor" ></ImageView>
+					
 					<View class="containerMainData">
 						<Label id="nombre_asesor" class="fontBoldWhite"></Label>
 						<Label id="correo" class="whiteNormal"></Label>	
@@ -69,8 +101,8 @@
 					
 				</View>
 				<Button id="solicitarInformacion" title="Solicitar Informes"></Button>
-				<View id="mapview" ns="Alloy.Globals.Map" />
+				
 			</View>	
-			
+			-->
 	</ScrollView>
 </Alloy>

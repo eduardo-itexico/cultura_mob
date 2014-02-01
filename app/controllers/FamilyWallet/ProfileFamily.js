@@ -6,6 +6,7 @@ var imagenes = params.Imagen;
 var inmueble = params.Inmueble;
 var colonia	 = params.Colonia;
 var opcionador = params.Opcionador;
+var nombreColonia = capitalize(colonia.nombre);
 Ti.API.info('----'+JSON.stringify(params));
 
 function numberToCurrency(number, decimalSeparator, thousandsSeparator, nDecimalDigits){
@@ -47,25 +48,42 @@ function capitalize(cadena){
 	return  cadena[0].toUpperCase() + cadena.slice(1).toLowerCase();
 };
 
-$.imagenPrincipal.addEventListener('postlayout', function(e) {
-    $.imagenPrincipal.backgroundImage =  L('path_base_img_inmuebles_main') + inmueble.imagen_principal;
- });
- 
 
 function showGaleria(){
 	APP.openWindow({controller:"FamilyWallet/Galeria",
 								controllerParams:imagenes});
 }
 
+function sendEmail(){
+	
+	var html =  "Saludos."+"\r\n"+"\r\n"+
+                 "Requiero informes sobre el inmueble:"+inmueble.clave+"\r\n"+"\r\n";
+	var emailDialog = Ti.UI.createEmailDialog();
+	emailDialog.subject = "Informes sobre " + inmueble.inmueble + " " + nombreColonia;
+	emailDialog.toRecipients = [opcionador.correo];
+	emailDialog.messageBody = html;
+	emailDialog.open();
+}
+
+
+
+$.imagenPrincipal.image =  L('path_base_img_inmuebles_normal_main') + inmueble.imagen_principal;
+if(imagenes && imagenes.length > 0){
+	var firstImage = imagenes[0];
+	Ti.API.info('URL-------->'+L('path_base_img_inmuebles_galeria') + firstImage.nombre); 
+	$.firstFromGaleria.image =   L('path_base_img_inmuebles_galeria') + firstImage.nombre;	
+	
+	
+}
+
 $.tipo.text 		= inmueble.inmueble;
 $.movimiento.text 	= inmueble.movimiento;
-$.colonia.text 	= capitalize(colonia.nombre);
+$.colonia.text 		= nombreColonia;
 $.precio.text	= "$ "+getPrecio(inmueble);
 if(inmueble.comentarios != null){
 	$.contentDescripcion = inmueble.comentarios;	
 }else{
-	$.descripcion.visible 			= false;
-	$.contentDescripcion.visible 	= false;
+	$.sectionDescription.visible 	= false;
 }
 $.plantas.text 		= inmueble.plantas;
 $.recamaras.text 	= inmueble.recamaras;
@@ -79,16 +97,17 @@ $.alberca.text				= inmueble.alberca ? "Si" : "No";
 $.cuarto_servicio.text		= inmueble.cuarto_servicio ? "Si" : "No";
 
 $.nombre_asesor.text 	= opcionador.nombre;
-$.correo.text 			= opcionador.correo;
+//$.correo.text 			= opcionador.correo;
 $.telefono_oficina.text = opcionador.telefono_oficina;
 $.telefono.text 		= opcionador.telefono;
 $.celular.text 			= opcionador.celular;
-
+/*
 $.imagenAsesor.addEventListener('postlayout', function(e) {
     $.imagenAsesor.backgroundImage =  L('path_base_img_inmuebles_asesor') + (opcionador.mostrar_foto ?  
     																	opcionador.imagen:
     																	"usuario_default_pagina.jpg");
  });
+ */
 // API calls to the map module need to use the Alloy.Globals.Map reference
 var latitude = "";
 var longitude = "";
@@ -107,3 +126,5 @@ if(inmueble.lat_long != ""){
 	});
 	$.mapview.addAnnotation(point);
 } 
+
+
